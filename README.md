@@ -38,8 +38,7 @@
 4. `Save` करें → आपकी साइट live हो जाएगी!
 
 **URL होगा:** 
-
-https://github.com/rampaulsaini/shiromani-rampal-saini.git`https://yourusername.github.io/repository-name`
+`https://yourusername.github.io/repository-name`
 ## 🛠️ Sections
 
 | Section | विवरण |
