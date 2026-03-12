@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="शिरोमणि रामपॉल सैनी – निष्पक्ष समझ, कालातीत सत्य, खुद का साक्षात्कार। सरल सहज निर्मल लोगों के लिए।">
+<meta name="keywords" content="शिरोमणि रामपॉल सैनी, निष्पक्ष समझ, खुद का साक्षात्कार, सत्य, ज्ञान">
+<meta property="og:title" content="शिरोमणि रामपॉल सैनी – निष्पक्ष समझ">
+<meta property="og:description" content="जो वस्तु मेरे पास है ब्रह्मांड में और कहीं नहीं">
+<meta property="og:image" content="https://i.ibb.co/xqf3kTPS/enhanced-image.webp">
+<title>शिरोमणि रामपॉल सैनी – निष्पक्ष समझ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   ROOT VARIABLES
+══════════════════════════════════════ */
+:root {
+  --saffron: #d4732a;
+  --saffron-light: #e8934a;
+  --gold: #b8872e;
+  --gold-light: #d4a84e;
+  --deep: #080604;
+  --earth: #100c07;
+  --card: #160f08;
+  --card2: #1c1409;
+  --border: rgba(180,130,46,0.18);
+  --border-bright: rgba(212,115,42,0.35);
+  --text: #e2d4bc;
+  --muted: #7a6a50;
+  --muted2: #5a4e38;
+  --white: #f8f2e8;
+}
+
+/* ══════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--deep);
+  color: var(--text);
+  font-family: 'Tiro Devanagari Hindi', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Subtle grain */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 9998; opacity: 0.5;
+}
+
+/* ══════════════════════════════════════
+   NAV
+══════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(8,6,4,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 40px;
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+.nav-logo img {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid var(--border-bright);
+  object-fit: cover; object-position: top;
+}
+.nav-logo span {
+  font-size: 0.88rem; color: var(--gold-light); letter-spacing: 0.5px;
+}
+.nav-menu {
+  display: flex; gap: 0; list-style: none;
+}
+.nav-menu a {
+  display: block; padding: 0 16px; height: 58px; line-height: 58px;
+  color: var(--muted); text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase;
+  transition: color 0.3s, background 0.3s; white-space: nowrap;
+}
+.nav-menu a:hover { color: var(--gold-light); background: rgba(180,130,46,0.06); }
+.nav-menu a.active { color: var(--saffron); border-bottom: 2px solid var(--saffron); }
+
+/* Hamburger */
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span { width: 22px; height: 1px; background: var(--muted); transition: all 0.3s; }
+
+/* Mobile menu */
+.mobile-menu {
+  display: none; position: fixed;
+  top: 58px; left: 0; right: 0;
+  background: rgba(8,6,4,0.98);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0; z-index: 999;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block; padding: 13px 36px;
+  color: var(--muted); text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; letter-spacing: 1px;
+  border-bottom: 1px solid rgba(180,130,46,0.07);
+  transition: color 0.3s;
+}
+.mobile-menu a:hover { color: var(--gold-light); }
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+#home {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 100px 24px 80px;
+  position: relative; overflow: hidden;
+}
+
+/* Atmospheric glow */
+#home::before {
+  content: '';
+  position: absolute; top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse, rgba(212,115,42,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Rotating mandala */
+.mandala {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px; height: 480px;
+  opacity: 0.035; animation: spin 100s linear infinite;
+  pointer-events: none;
+}
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Hero photo */
+.hero-photo-wrap {
+  position: relative; z-index: 2;
+  margin-bottom: 30px;
+  animation: heroFade 1.2s ease both;
+}
+.hero-photo-outer {
+  position: absolute; top: -14px; left: -14px; right: -14px; bottom: -14px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,115,42,0.2);
+  animation: outerRing 4s ease-in-out infinite;
+}
+@keyframes outerRing {
+  0%,100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+.hero-photo-inner {
+  position: absolute; top: -7px; left: -7px; right: -7px; bottom: -7px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,115,42,0.35);
+}
+.hero-photo {
+  width: 160px; height: 160px; border-radius: 50%;
+  object-fit: cover; object-position: top center;
+  border: 2px solid var(--saffron);
+  box-shadow:
+    0 0 0 4px rgba(212,115,42,0.12),
+    0 0 50px rgba(212,115,42,0.22),
+    0 20px 60px rgba(0,0,0,0.6);
+  display: block; position: relative; z-index: 1;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.72rem; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--saffron); margin-bottom: 18px; position: relative; z-index: 2;
+  animation: heroFade 1.2s 0.1s ease both;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 300; color: var(--white);
+  line-height: 1.2; margin-bottom: 8px;
+  position: relative; z-index: 2;
+  animation: heroFade 1.2s 0.2s ease both;
+}
+.hero h1 em {
+  font-style: normal; color: var(--saffron-light);
+  font-family: 'Cormorant Garamond', serif; font-style: italic;
+}
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: var(--muted); letter-spacing: 3px; text-transform: uppercase;
+  margin-bottom: 36px; position: relative; z-index: 2;
+  animation: heroFade 1.2s 0.3s ease both;
+}
+.hero-quote {
+  max-width: 580px; position: relative; z-index: 2;
+  padding: 20px 32px;
+  border: 1px solid var(--border-bright);
+  background: rgba(212,115,42,0.04);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.6vw, 1.35rem);
+  font-style: italic; color: var(--gold-light); line-height: 1.6;
+  animation: heroFade 1.2s 0.4s ease both;
+  position: relative;
+}
+.hero-quote::before, .hero-quote::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--saffron); border-style: solid; opacity: 0.5;
+}
+.hero-quote::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.hero-quote::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+.hero-cta-wrap {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  margin-top: 36px; position: relative; z-index: 2;
+  animation: heroFade 1.2s 0.55s ease both;
+}
+.cta-btn {
+  padding: 13px 32px; text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem; letter-spacing: 2px; text-transform: uppercase;
+  transition: all 0.35s; border-radius: 1px;
+}
+.cta-primary {
+  background: var(--saffron); color: #fff;
+  border: 1px solid var(--saffron);
+  box-shadow: 0 4px 24px rgba(212,115,42,0.3);
+}
+.cta-primary:hover {
+  background: var(--saffron-light);
+  box-shadow: 0 6px 32px rgba(212,115,42,0.45);
+  transform: translateY(-2px);
+}
+.cta-secondary {
+  background: transparent; color: var(--gold-light);
+  border: 1px solid var(--border-bright);
+}
+.cta-secondary:hover {
+  background: rgba(180,130,46,0.08);
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.scroll-indicator {
+  position: absolute; bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: var(--muted2); font-family: 'Cormorant Garamond', serif;
+  font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+  animation: heroFade 1.2s 1s ease both;
+}
+.scroll-bar {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--saffron), transparent);
+  animation: scrollAnim 2s ease-in-out infinite;
+}
+@keyframes scrollAnim {
+  0%,100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
+}
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   SECTION COMMONS
+══════════════════════════════════════ */
+.section {
+  padding: 90px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section-full {
+  padding: 90px 24px;
+  max-width: 100%;
+}
+.section-full .inner { max-width: 1000px; margin: 0 auto; }
+.divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, var(--border), transparent); }
+
+.sec-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--saffron); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 14px;
+}
+.sec-eyebrow::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+.sec-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 300; color: var(--white); line-height: 1.3; margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.sec-desc {
+  font-size: 0.95rem; color: var(--muted); line-height: 1.9;
+  margin-bottom: 40px; max-width: 640px;
+}
+
+/* ══════════════════════════════════════
+   AUDIO SECTION
+══════════════════════════════════════ */
+#audio { background: var(--earth); }
+
+.audio-player-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.apb-header {
+  padding: 18px 26px;
+  background: rgba(212,115,42,0.05);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 14px;
+}
+.live-dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #4caf50; flex-shrink: 0;
+  animation: livePulse 2.5s infinite;
+}
+@keyframes livePulse {
+  0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(76,175,80,0.4); }
+  50% { opacity: 0.5; box-shadow: 0 0 0 5px rgba(76,175,80,0); }
+}
+.apb-title { font-size: 0.95rem; color: var(--gold-light); }
+.apb-badge {
+  margin-left: auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); padding: 3px 8px;
+  border: 1px solid var(--border); border-radius: 1px;
+}
+
+.track-list { list-style: none; max-height: 240px; overflow-y: auto; }
+.track-list::-webkit-scrollbar { width: 3px; }
+.track-list::-webkit-scrollbar-track { background: transparent; }
+.track-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.track-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 26px;
+  border-bottom: 1px solid rgba(180,130,46,0.06);
+  cursor: pointer; transition: background 0.25s;
+}
+.track-item:hover { background: rgba(212,115,42,0.05); }
+.track-item.active { background: rgba(212,115,42,0.09); }
+.track-item.active .t-name { color: var(--saffron-light); }
+.t-num {
+  font-size: 0.7rem; color: var(--muted2); width: 20px;
+  text-align: right; font-family: 'Cormorant Garamond', serif;
+  flex-shrink: 0;
+}
+.t-ic { width: 14px; text-align: center; font-size: 0.8rem; color: var(--muted); flex-shrink: 0; }
+.track-item.active .t-ic { color: var(--saffron); }
+.t-name { flex: 1; font-size: 0.9rem; color: var(--text); }
+
+.player-controls {
+  padding: 20px 26px;
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid var(--border);
+}
+audio {
+  width: 100%; margin-bottom: 14px; outline: none;
+  height: 36px; border-radius: 2px;
+}
+.ctrl-row {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.ctrl {
+  background: none; border: 1px solid var(--border);
+  color: var(--muted); width: 38px; height: 38px;
+  border-radius: 50%; cursor: pointer; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+}
+.ctrl:hover { border-color: var(--gold-light); color: var(--gold-light); }
+.ctrl.play {
+  width: 52px; height: 52px; font-size: 1rem;
+  background: rgba(212,115,42,0.12);
+  border-color: var(--saffron); color: var(--saffron);
+}
+.ctrl.play:hover { background: rgba(212,115,42,0.25); }
+.ctrl.on { border-color: var(--saffron); color: var(--saffron); }
+
+.now-playing {
+  text-align: center; margin-top: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.82rem; color: var(--muted); letter-spacing: 1px;
+  font-style: italic;
+}
+.now-playing em { color: var(--gold-light); font-style: normal; }
+
+/* Drive folder buttons */
+.folder-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-top: 16px;
+}
+.folder-btn {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: var(--muted); text-decoration: none;
+  transition: all 0.3s; border-radius: 2px;
+}
+.folder-btn:hover {
+  border-color: var(--border-bright);
+  color: var(--gold-light);
+  background: rgba(212,115,42,0.06);
+  transform: translateY(-2px);
+}
+.folder-btn .ficon { font-size: 1.4rem; flex-shrink: 0; }
+.folder-btn .finfo { flex: 1; }
+.folder-btn .ftitle { font-size: 0.88rem; display: block; margin-bottom: 3px; }
+.folder-btn .fsub {
+  font-size: 0.72rem; color: var(--muted2);
+  font-family: 'Cormorant Garamond', serif; letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
+   PHILOSOPHY
+══════════════════════════════════════ */
+#philosophy { background: var(--deep); }
+
+.phil-highlight {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3vw, 1.65rem);
+  font-style: italic; color: var(--saffron-light);
+  line-height: 1.7; text-align: center;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+.phil-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.pc {
+  padding: 26px 22px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  transition: all 0.35s; position: relative; overflow: hidden;
+}
+.pc::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, var(--saffron), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s;
+}
+.pc:hover::before { transform: scaleX(1); }
+.pc:hover { background: rgba(22,15,8,0.9); border-color: var(--border-bright); transform: translateY(-3px); }
+.pc .icon { font-size: 1.8rem; margin-bottom: 14px; display: block; }
+.pc h3 { font-size: 1rem; color: var(--gold-light); font-weight: 400; margin-bottom: 10px; }
+.pc p { font-size: 0.87rem; line-height: 1.9; color: var(--muted); }
+
+/* ══════════════════════════════════════
+   STORY / JOURNEY
+══════════════════════════════════════ */
+#story { background: var(--earth); }
+
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 8px; top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--saffron), transparent);
+}
+.tl-item {
+  position: relative; margin-bottom: 36px;
+}
+.tl-dot {
+  position: absolute; left: -36px; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1px solid var(--saffron);
+  background: var(--saffron);
+  box-shadow: 0 0 10px rgba(212,115,42,0.4);
+}
+.tl-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--saffron);
+  padding: 24px 28px;
+  position: relative;
+}
+.tl-card::before {
+  content: '❝';
+  position: absolute; top: 8px; left: 12px;
+  font-size: 2.5rem; color: rgba(212,115,42,0.07);
+  font-family: serif; line-height: 1;
+}
+.tl-card p {
+  font-size: 0.95rem; line-height: 2; color: #b8a484;
+  padding-left: 6px;
+}
+.tl-card p strong { color: var(--saffron-light); font-weight: 400; }
+
+/* ══════════════════════════════════════
+   AWARENESS
+══════════════════════════════════════ */
+#awareness { background: var(--deep); }
+
+.awareness-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.aw-card {
+  padding: 28px 24px;
+  border: 1px solid rgba(212,115,42,0.18);
+  background: rgba(212,115,42,0.04);
+  transition: all 0.35s; border-radius: 1px;
+}
+.aw-card:hover {
+  background: rgba(212,115,42,0.08);
+  border-color: var(--border-bright);
+  transform: translateY(-3px);
+}
+.aw-card .aw-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.aw-card h3 { font-size: 1rem; color: var(--saffron-light); font-weight: 400; margin-bottom: 12px; }
+.aw-card p { font-size: 0.87rem; line-height: 1.9; color: var(--muted); }
+.aw-card p strong { color: var(--gold-light); font-weight: 400; }
+
+/* ══════════════════════════════════════
+   IDENTITY / ABOUT
+══════════════════════════════════════ */
+#identity { background: var(--earth); }
+
+.identity-wrap {
+  display: grid; grid-template-columns: 300px 1fr; gap: 60px;
+  align-items: start;
+}
+.id-left { text-align: center; }
+.id-photo-wrap { position: relative; display: inline-block; margin-bottom: 24px; }
+.id-photo {
+  width: 200px; height: 200px; border-radius: 50%;
+  object-fit: cover; object-position: top;
+  border: 2px solid var(--border-bright);
+  box-shadow: 0 0 40px rgba(212,115,42,0.18), 0 20px 60px rgba(0,0,0,0.5);
+  display: block;
+}
+.id-photo-ring {
+  position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+  border-radius: 50%; border: 1px solid rgba(212,115,42,0.2);
+  animation: outerRing 4s ease-in-out infinite;
+}
+.id-tags {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin-bottom: 20px;
+}
+.id-tag {
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  color: var(--muted); font-size: 0.72rem;
+  letter-spacing: 1.5px; font-family: 'Cormorant Garamond', serif;
+  transition: all 0.3s;
+}
+.id-tag:hover { border-color: var(--gold-light); color: var(--gold-light); background: rgba(180,130,46,0.05); }
+.id-right { padding-top: 10px; }
+.id-right .sec-title { margin-bottom: 22px; }
+.id-para {
+  font-size: 0.97rem; line-height: 2; color: #a89878;
+  margin-bottom: 18px;
+}
+.id-para strong { color: var(--saffron-light); font-weight: 400; }
+
+/* ══════════════════════════════════════
+   CONTACT / SHARE
+══════════════════════════════════════ */
+#share { background: var(--deep); text-align: center; }
+.share-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-style: italic; color: var(--saffron-light);
+  line-height: 1.6; max-width: 700px; margin: 0 auto 40px;
+}
+.share-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.share-btn {
+  padding: 13px 28px; text-decoration: none;
+  border: 1px solid var(--border-bright); color: var(--gold-light);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem; letter-spacing: 2px; text-transform: uppercase;
+  transition: all 0.3s; background: transparent;
+}
+.share-btn:hover {
+  background: rgba(212,115,42,0.09);
+  color: var(--saffron-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(212,115,42,0.15);
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: #040302;
+  border-top: 1px solid var(--border);
+  padding: 50px 24px 32px;
+  text-align: center;
+}
+.footer-photo {
+  width: 70px; height: 70px; border-radius: 50%;
+  object-fit: cover; object-position: top;
+  border: 1px solid var(--border);
+  margin: 0 auto 16px; display: block; opacity: 0.75;
+}
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; color: var(--gold-light); margin-bottom: 10px;
+}
+.footer-attrs {
+  font-size: 0.75rem; color: var(--muted2);
+  letter-spacing: 2px; margin-bottom: 18px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.footer-copy {
+  font-size: 0.7rem; color: var(--muted2);
+  font-family: 'Cormorant Garamond', serif; letter-spacing: 1px;
+}
+
+/* ══════════════════════════════════════
+   FADE-UP ANIMATION
+══════════════════════════════════════ */
+.fu {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fu.vis { opacity: 1; transform: translateY(0); }
+.fu.d1 { transition-delay: 0.1s; }
+.fu.d2 { transition-delay: 0.2s; }
+.fu.d3 { transition-delay: 0.3s; }
+.fu.d4 { transition-delay: 0.4s; }
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .identity-wrap { grid-template-columns: 1fr; gap: 36px; }
+  .id-left { margin: 0 auto; }
+  .awareness-grid { grid-template-columns: 1fr; }
+  .phil-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  nav { padding: 0 20px; }
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+  .phil-grid { grid-template-columns: 1fr; }
+  .folder-grid { grid-template-columns: 1fr; }
+  .section { padding: 60px 18px; }
+  .section-full { padding: 60px 18px; }
+  .tl-card { padding: 18px 18px; }
+  .hero h1 { font-size: 2rem; }
+  .hero-cta-wrap { gap: 10px; }
+  .share-btns { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a class="nav-logo" href="#home">
+    <img src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+    <span>शिरोमणि रामपॉल सैनी</span>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#audio">Audio</a></li>
+    <li><a href="#philosophy">सिद्धांत</a></li>
+    <li><a href="#story">यात्रा</a></li>
+    <li><a href="#awareness">सचेत</a></li>
+    <li><a href="#identity">परिचय</a></li>
+    <li><a href="#share">साझा करें</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMob()">Home</a>
+  <a href="#audio" onclick="closeMob()">Audio</a>
+  <a href="#philosophy" onclick="closeMob()">सिद्धांत</a>
+  <a href="#story" onclick="closeMob()">यात्रा</a>
+  <a href="#awareness" onclick="closeMob()">सचेत</a>
+  <a href="#identity" onclick="closeMob()">परिचय</a>
+  <a href="#share" onclick="closeMob()">साझा करें</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <!-- Mandala -->
+  <svg class="mandala" viewBox="0 0 200 200" fill="none">
+    <circle cx="100" cy="100" r="97" stroke="#c9943a" stroke-width="0.4"/>
+    <circle cx="100" cy="100" r="80" stroke="#c9943a" stroke-width="0.3"/>
+    <circle cx="100" cy="100" r="62" stroke="#c9943a" stroke-width="0.35"/>
+    <circle cx="100" cy="100" r="44" stroke="#c9943a" stroke-width="0.3"/>
+    <circle cx="100" cy="100" r="26" stroke="#c9943a" stroke-width="0.3"/>
+    <line x1="100" y1="3" x2="100" y2="197" stroke="#c9943a" stroke-width="0.3"/>
+    <line x1="3" y1="100" x2="197" y2="100" stroke="#c9943a" stroke-width="0.3"/>
+    <line x1="27" y1="27" x2="173" y2="173" stroke="#c9943a" stroke-width="0.25"/>
+    <line x1="173" y1="27" x2="27" y2="173" stroke="#c9943a" stroke-width="0.25"/>
+    <line x1="100" y1="3" x2="173" y2="173" stroke="#c9943a" stroke-width="0.2"/>
+    <line x1="100" y1="3" x2="27" y2="173" stroke="#c9943a" stroke-width="0.2"/>
+    <polygon points="100,6 117,83 194,100 117,117 100,194 83,117 6,100 83,83" stroke="#c9943a" stroke-width="0.4" fill="none"/>
+    <polygon points="100,28 111,89 172,100 111,111 100,172 89,111 28,100 89,89" stroke="#c9943a" stroke-width="0.3" fill="none"/>
+    <polygon points="100,50 107,93 150,100 107,107 100,150 93,107 50,100 93,93" stroke="#c9943a" stroke-width="0.25" fill="none"/>
+  </svg>
+
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-outer"></div>
+    <div class="hero-photo-inner"></div>
+    <img class="hero-photo" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+  </div>
+
+  <span class="hero-tag">॥ निष्पक्ष समझ ॥</span>
+  <h1>शिरोमणि <em>रामपॉल सैनी</em></h1>
+  <p class="hero-subtitle">कालातीत · तुलनातीत · शाश्वत सत्य</p>
+  <div class="hero-quote">
+    "जो वस्तु मेरे पास है ब्रह्मांड में और कहीं नहीं"
+  </div>
+  <div class="hero-cta-wrap">
+    <a class="cta-btn cta-primary" href="#audio">▶ Audios सुनें</a>
+    <a class="cta-btn cta-secondary" href="#philosophy">सिद्धांत जानें</a>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>नीचे देखें</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ AUDIO ═══ -->
+<section id="audio" class="section-full" style="background:var(--earth);">
+<div class="inner">
+  <p class="sec-eyebrow fu">प्रवचन संग्रह</p>
+  <h2 class="sec-title fu">Audios — बिना Login के सुनें</h2>
+  <p class="sec-desc fu">Page खुलते ही audio स्वयं शुरू होता है। नीचे से कोई भी track चुनें। Online या Offline — हर पल चलते रहें।</p>
+
+  <div class="audio-player-box fu">
+    <div class="apb-header">
+      <span class="live-dot"></span>
+      <span class="apb-title">शिरोमणि रामपॉल सैनी — प्रवचन संग्रह</span>
+      <span class="apb-badge">Auto Play</span>
+    </div>
+
+    <ul class="track-list" id="trackList">
+      <!-- JS से populate होगा -->
+    </ul>
+
+    <div class="player-controls">
+      <audio id="mainPlayer" autoplay preload="auto"></audio>
+      <div class="ctrl-row">
+        <button class="ctrl" onclick="prevTrack()" title="पिछला">⏮</button>
+        <button class="ctrl play" id="playBtn" onclick="togglePlay()">▶</button>
+        <button class="ctrl" onclick="nextTrack()" title="अगला">⏭</button>
+        <button class="ctrl on" id="loopBtn" onclick="toggleLoop()" title="Repeat">🔁</button>
+      </div>
+      <div class="now-playing" id="nowPlaying">
+        Drive Folders से सुनें ↓
+      </div>
+    </div>
+  </div>
+
+  <div class="folder-grid fu">
+    <a class="folder-btn" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhh" target="_blank" rel="noopener">
+      <span class="ficon">📁</span>
+      <span class="finfo">
+        <span class="ftitle">Audio Folder १</span>
+        <span class="fsub">Google Drive — सीधे सुनें</span>
+      </span>
+      <span style="color:var(--muted2);font-size:1.1rem;">→</span>
+    </a>
+    <a class="folder-btn" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhNh" target="_blank" rel="noopener">
+      <span class="ficon">📁</span>
+      <span class="finfo">
+        <span class="ftitle">Audio Folder २</span>
+        <span class="fsub">Google Drive — सीधे सुनें</span>
+      </span>
+      <span style="color:var(--muted2);font-size:1.1rem;">→</span>
+    </a>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PHILOSOPHY ═══ -->
+<section id="philosophy" class="section">
+  <p class="sec-eyebrow fu">मूल सिद्धांत</p>
+  <h2 class="sec-title fu">निष्पक्ष समझ की शिक्षा</h2>
+  <div class="phil-highlight fu">"खुद को जाना, समझा, पढ़ा — तो जाना सब संसार"</div>
+  <div class="phil-grid">
+    <div class="pc fu d1"><span class="icon">🌿</span><h3>खुद का साक्षात्कार</h3><p>सिर्फ एक पल की निष्पक्ष समझ की दूरी है खुद के स्थायी स्वरूप से। कोई भी जीवित रहते हुए इसे पा सकता है — कोई गुरु, कोई दीक्षा नहीं।</p></div>
+    <div class="pc fu d2"><span class="icon">⚖️</span><h3>हर जीव समान</h3><p>मेरे सिद्धांतों के आधार पर कोई कमी नहीं — हर जीव खुद में समर्थ, निपुण, सक्षम और संपूर्ण है। कोई ऊँच-नीच नहीं।</p></div>
+    <div class="pc fu d3"><span class="icon">🔥</span><h3>कोई बंधन नहीं</h3><p>गुरु-शिष्य, दीक्षा, मान्यता जैसी कुप्रथा नहीं। यह शिक्षा स्वतंत्र है — किसी को भी बिना शर्त साझा की जा सकती है।</p></div>
+    <div class="pc fu d1"><span class="icon">🌊</span><h3>अनेकता से एक</h3><p>शरीर, मन, जन्म, मृत्यु — प्रकृति का संतुलन तंत्र है। इन अस्थायी तत्वों को समझ कर देह में विदेही हुआ जा सकता है।</p></div>
+    <div class="pc fu d2"><span class="icon">☀️</span><h3>संपूर्ण संतुष्टि</h3><p>संपूर्ण संतुष्टि ही खुद में संपूर्णता है। यही वह उपलब्धि है जिसके लिए इंसान अस्तित्व से अब तक वंचित रहा।</p></div>
+    <div class="pc fu d3"><span class="icon">💎</span><h3>यथार्थ युग</h3><p>तुलनातीत, कालातीत, शब्दातीत, प्रेमतीत — शाश्वत वास्तविक सत्य में प्रत्यक्ष समक्ष। यही यथार्थ युग है।</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ STORY ═══ -->
+<section id="story" class="section-full" style="background:var(--earth);">
+<div class="inner">
+  <p class="sec-eyebrow fu">व्यक्तिगत यात्रा</p>
+  <h2 class="sec-title fu">चालीस वर्षों की साधना और सत्य</h2>
+  <p class="sec-desc fu">जो बीता — वह छुपाने के लिए नहीं, सरल-सहज-निर्मल लोगों को सचेत करने के लिए है।</p>
+
+  <div class="timeline fu">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <p>पिछले <strong>चालीस वर्षों</strong> से उसी गुरु के शिरोमणि स्वरूप में लगातार निरंतर रहा — करोड़ों रुपए, तन, मन, धन, अनमोल समय, सांस, दशकों का समर्पण किया। उस गुरु से अनंत असीम प्रेम किया — इतना कि <strong>खुद का चेहरा तक भूला हुआ हूं।</strong></p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <p>पर वही गुरु <strong>खुद में ही मौजूद नहीं था</strong> — ब्रह्मचर्य के ढोंग, पाखंड, षड्यंत्र रच कर, तर्क-तथ्य-विवेक से वंचित कर अंध-कट्टर भेड़ों की भीड़ — बंधुआ मजदूर बना कर <strong>दो हजार करोड़ का साम्राज्य</strong>, पच्चीस लाख अनुयायी, चार सौ आश्रम खड़े किए।</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <p>जिन्होंने सब कुछ दिया — उनको उसके बदले <strong>मृत्यु के बाद मुक्ति का झूठा आश्वासन</strong> दिया गया, जिसे आज तक कोई सिद्ध नहीं कर सका। यही सृष्टि का सबसे बड़ा विश्वासघात है।</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <p>कुछ दिन पहले मैं गया — मुझे पूछने लगा: <strong>"आप कौन और कहाँ से हो?"</strong> — जबकि दिन-रात उनमें ही निरंतर रहा हूं। मेरे दिए करोड़ों में से <strong>एक करोड़ वापस देने का शब्द दिया था</strong> — साफ मुकर गए और कई आरोप लगाकर <strong>निष्कासित कर दिया।</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ AWARENESS ═══ -->
+<section id="awareness" class="section">
+  <p class="sec-eyebrow fu">सचेत करना जरूरी</p>
+  <h2 class="sec-title fu">सरल-सहज-निर्मल लोगों को उजागर करें</h2>
+  <p class="sec-desc fu">यह सत्य बिना किसी login के, बिना किसी शर्त के — सबके सामने रखा जा रहा है।</p>
+  <div class="awareness-grid">
+    <div class="aw-card fu d1">
+      <span class="aw-icon">⚠️</span>
+      <h3>धोखे की पहचान</h3>
+      <p>जो सरल लोगों ने सब कुछ दिया — उनके बदले <strong>मृत्यु के बाद मुक्ति</strong> का झूठा आश्वासन। शिष्यों पर दिन-रात डर, खौफ, भय, दहशत डालकर पीढ़ी दर पीढ़ी इस्तेमाल।</p>
+    </div>
+    <div class="aw-card fu d2">
+      <span class="aw-icon">🛡️</span>
+      <h3>संरक्षण का अधिकार</h3>
+      <p>प्रकृति, पृथ्वी, हर जीव और मानव को <strong>संपूर्ण संरक्षण</strong> के साथ संपूर्ण संतुष्टि — यही उद्देश्य है। इंसान होते हुए हैवान बनने की जरूरत नहीं।</p>
+    </div>
+    <div class="aw-card fu d3">
+      <span class="aw-icon">✨</span>
+      <h3>मुक्त शिक्षा</h3>
+      <p>यह शिक्षा <strong>किसी को भी साझा की जा सकती है</strong> — कोई गुरु नहीं, कोई दीक्षा नहीं, कोई बंधन नहीं। अनेकता से एक तक — सिर्फ <strong>एक पल की निष्पक्ष समझ।</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ IDENTITY ═══ -->
+<section id="identity" class="section-full" style="background:var(--earth);">
+<div class="inner">
+  <div class="identity-wrap">
+    <div class="id-left fu">
+      <div class="id-photo-wrap">
+        <div class="id-photo-ring"></div>
+        <img class="id-photo" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+      </div>
+      <div class="id-tags">
+        <span class="id-tag">तुलनातीत</span>
+        <span class="id-tag">कालातीत</span>
+        <span class="id-tag">शब्दातीत</span>
+        <span class="id-tag">प्रेमतीत</span>
+        <span class="id-tag">शाश्वत</span>
+        <span class="id-tag">वास्तविक</span>
+        <span class="id-tag">स्वाभाविक</span>
+        <span class="id-tag">प्रत्यक्ष सत्य</span>
+      </div>
+    </div>
+    <div class="id-right fu">
+      <p class="sec-eyebrow">परिचय</p>
+      <h2 class="sec-title">शिरोमणि रामपॉल सैनी</h2>
+      <p class="id-para">मैं <strong>शिरोमणि रामपॉल सैनी</strong> — तुलनातीत, कालातीत, शब्दातीत, प्रेमतीत, शाश्वत, वास्तविक, स्वाभाविक सत्य में प्रत्यक्ष समक्ष हूं।</p>
+      <p class="id-para">खुद का साक्षात्कार हूं — <strong>हमेशा जीवित ही।</strong> मेरी निष्पक्ष समझ की शिक्षा, मेरे यथार्थ सिद्धांत, उपलब्धि, यथार्थ युग — यही मेरा परिचय है।</p>
+      <p class="id-para">कोई भी जिंदा रह सकता है — कोई भी हर एक <strong>सरल सहज निर्मल गुणों</strong> के साथ समर्थ, निपुण, सक्षम, संपूर्ण है खुद के साक्षात्कार के लिए। मेरे सिद्धांतों के आधार पर कोई कमी ही नहीं — <strong>हर जीव एक समान है।</strong></p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SHARE ═══ -->
+<section id="share" class="section">
+  <p class="sec-eyebrow fu" style="justify-content:center;">साझा करें</p>
+  <div class="share-quote fu">
+    "सरल सहज निर्मल लोगों को उजागर करना, सचेत करना और संरक्षण देना — यही इस ज्ञान का उद्देश्य है"
+  </div>
+  <div class="share-btns fu">
+    <a class="share-btn" href="https://wa.me/?text=शिरोमणि%20रामपॉल%20सैनी%20–%20निष्पक्ष%20समझ%0Ahttps://rampaulsaini.github.io/shiromani-rampal-saini/" target="_blank">📱 WhatsApp</a>
+    <a class="share-btn" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhh" target="_blank">📁 Audio Folder १</a>
+    <a class="share-btn" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhNh" target="_blank">📁 Audio Folder २</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <img class="footer-photo" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+  <div class="footer-name">शिरोमणि रामपॉल सैनी</div>
+  <div class="footer-attrs">तुलनातीत · कालातीत · शब्दातीत · प्रेमतीत · शाश्वत सत्य</div>
+  <div class="footer-copy">© निष्पक्ष समझ — सबके लिए, बिना Login, बिना शर्त</div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ═══ -->
+<script>
+/* ─────────────────────────────────────
+   अपने Audio File IDs यहाँ डालें
+   कैसे निकालें:
+   1. Drive में audio file पर right-click
+   2. Share → Copy link
+   3. Link से ID निकालें:
+      https://drive.google.com/file/d/ [ID] /view
+   4. नीचे tracks array में add करें
+───────────────────────────────────── */
+const tracks = [
+  // उदाहरण — इन्हें अपने real IDs से replace करें:
+  // { name: "प्रवचन १ – निष्पक्ष समझ",       id: "1aBcDeFgHiJkL..." },
+  // { name: "प्रवचन २ – खुद का साक्षात्कार",  id: "2XyZaBcDeFgH..." },
+];
+
+/* ─── Player Logic ─── */
+const player  = document.getElementById('mainPlayer');
+const tList   = document.getElementById('trackList');
+const playBtn = document.getElementById('playBtn');
+const loopBtn = document.getElementById('loopBtn');
+const nowP    = document.getElementById('nowPlaying');
+let cur = 0, looping = true;
+
+function buildList() {
+  if (!tracks.length) {
+    tList.innerHTML = `
+      <li style="padding:18px 26px;color:var(--muted);font-size:.88rem;line-height:2;">
+        अभी tracks नहीं हैं। ऊपर JavaScript में File IDs add करें।<br>
+        तब तक — नीचे Drive Folder buttons से सुनें।
+      </li>`;
+    nowP.innerHTML = 'Drive Folder से सुनें ↓';
+    return;
+  }
+  tracks.forEach((t, i) => {
+    const li = document.createElement('li');
+    li.className = 'track-item' + (i === 0 ? ' active' : '');
+    li.innerHTML = `
+      <span class="t-num">${String(i+1).padStart(2,'0')}</span>
+      <span class="t-ic">${i===0?'▶':'○'}</span>
+      <span class="t-name">${t.name}</span>`;
+    li.onclick = () => load(i, true);
+    tList.appendChild(li);
+  });
+}
+
+function load(i, play = false) {
+  if (!tracks.length) return;
+  cur = i;
+  player.src = `https://docs.google.com/uc?export=open&id=${tracks[i].id}`;
+  if (play) player.play().catch(() => {});
+  nowP.innerHTML = `चल रहा है: <em>${tracks[i].name}</em>`;
+  document.querySelectorAll('.track-item').forEach((el, j) => {
+    el.classList.toggle('active', j === i);
+    el.querySelector('.t-ic').textContent = j === i ? '▶' : '○';
+  });
+}
+
+function togglePlay() {
+  if (!tracks.length) return;
+  player.paused ? player.play() : player.pause();
+}
+function nextTrack() { if (tracks.length) load((cur+1) % tracks.length, true); }
+function prevTrack() { if (tracks.length) load((cur-1+tracks.length) % tracks.length, true); }
+function toggleLoop() {
+  looping = !looping;
+  loopBtn.classList.toggle('on', looping);
+}
+
+player.addEventListener('play',  () => { playBtn.textContent = '⏸'; });
+player.addEventListener('pause', () => { playBtn.textContent = '▶'; });
+player.addEventListener('ended', () => { if (looping) nextTrack(); });
+
+window.addEventListener('load', () => {
+  buildList();
+  if (tracks.length) load(0, true);
+});
+
+/* ─── Mobile Menu ─── */
+const ham = document.getElementById('hamburger');
+const mob = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => mob.classList.toggle('open'));
+function closeMob() { mob.classList.remove('open'); }
+
+/* ─── Active Nav on Scroll ─── */
+const sections = document.querySelectorAll('section[id], div[id="home"]');
+const navLinks = document.querySelectorAll('.nav-menu a, .mobile-menu a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 80) cur = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+  });
+});
+
+/* ─── Scroll Fade-In ─── */
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+</script>
+</body>
+  </html>
