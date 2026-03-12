@@ -2,9 +2,14 @@
 
 > **सृष्टि का शिरोमणि · यथार्थ युग के प्रणेता**
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://yourusername.github.io)
+[![Website Live](https://img.shields.io/badge/Website-Live-brightgreen)](https://rampaulsaini.github.io/shiromani-rampal-saini)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/rampaulsaini/shiromani-rampal-saini)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](.)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](.)
+
+🌐 **Live Website:** [https://rampaulsaini.github.io/shiromani-rampal-saini](https://rampaulsaini.github.io/shiromani-rampal-saini)
+
+📁 **GitHub Repository:** [https://github.com/rampaulsaini/shiromani-rampal-saini](https://github.com/rampaulsaini/shiromani-rampal-saini)
 
 ---
 
@@ -37,8 +42,8 @@
 3. **Source:** `main` branch, `/ (root)` चुनें
 4. `Save` करें → आपकी साइट live हो जाएगी!
 
-**URL होगा:** 
-`https://yourusername.github.io/repository-name`
+**आपकी Live URL:** [https://rampaulsaini.github.io/shiromani-rampal-saini](https://rampaulsaini.github.io/shiromani-rampal-saini)
+
 ## 🛠️ Sections
 
 | Section | विवरण |
