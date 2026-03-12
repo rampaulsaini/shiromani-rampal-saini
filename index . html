@@ -955,9 +955,7 @@ footer {
    4. नीचे tracks array में add करें
 ───────────────────────────────────── */
 const tracks = [
-  // उदाहरण — इन्हें अपने real IDs से replace करें:
-  // { name: "प्रवचन १ – निष्पक्ष समझ",       id: "1aBcDeFgHiJkL..." },
-  // { name: "प्रवचन २ – खुद का साक्षात्कार",  id: "2XyZaBcDeFgH..." },
+  { name: "प्रवचन १ – शिरोमणि रामपॉल सैनी", id: "1EtL3wVnvzfrOLOI7NDKiazG9PBFvlvd5" },
 ];
 
 /* ─── Player Logic ─── */
@@ -1048,4 +1046,4 @@ const obs = new IntersectionObserver(es => {
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
 </script>
 </body>
-  </html>
+</html>
