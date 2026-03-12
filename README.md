@@ -37,10 +37,9 @@
 3. **Source:** `main` branch, `/ (root)` चुनें
 4. `Save` करें → आपकी साइट live हो जाएगी!
 
-**URL होगा:** `https://yourusername.github.io/repository-name`
+**URL होगा:** 
 
-https://github.com/rampaulsaini/shiromani-rampal-saini.git
-
+https://github.com/rampaulsaini/shiromani-rampal-saini.git`https://yourusername.github.io/repository-name`
 ## 🛠️ Sections
 
 | Section | विवरण |
