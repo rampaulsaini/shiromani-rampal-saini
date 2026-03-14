@@ -1,4 +1,631 @@
-# 🕉 शिरोमणि रामपॉल सैनी — आधिकारिक वेबसाइट
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="शिरोमणि रामपॉल सैनी – सृष्टि का शिरोमणि, निष्पक्ष समझ, यथार्थ सिद्धांत">
+<meta property="og:title" content="शिरोमणि रामपॉल सैनी – सृष्टि का शिरोमणि">
+<meta property="og:image" content="https://i.ibb.co/xqf3kTPS/enhanced-image.webp">
+<title>शिरोमणि रामपॉल सैनी – सृष्टि का शिरोमणि</title>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --f:#d4732a;--f2:#e8934a;--f3:#f5aa6a;
+  --g:#b8872e;--g2:#d4a84e;--g3:#edd06e;
+  --deep:#050403;--dark:#090604;--card:#130d07;--card2:#1a1108;
+  --b:rgba(180,130,46,0.15);--b2:rgba(212,115,42,0.32);--b3:rgba(237,208,110,0.38);
+  --tx:#eedfc5;--mu:#8a7a60;--mu2:#544838;--wh:#faf5ec;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--deep);color:var(--tx);font-family:'Tiro Devanagari Hindi',serif;overflow-x:hidden;cursor:none;font-size:17px;line-height:1.7;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:.5;}
+
+/* CURSOR */
+.cur{position:fixed;width:8px;height:8px;background:var(--g3);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);mix-blend-mode:screen;transition:transform .1s;}
+.cur-r{position:fixed;width:34px;height:34px;border:1px solid rgba(212,115,42,0.5);border-radius:50%;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:all .18s ease;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;background:rgba(5,4,3,0.95);backdrop-filter:blur(22px);border-bottom:1px solid var(--b);}
+.nl{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nl img{width:36px;height:36px;border-radius:50%;border:1px solid var(--b2);object-fit:cover;object-position:top;}
+.nl-t{display:flex;flex-direction:column;}
+.nl-n{font-size:.85rem;color:var(--g2);letter-spacing:.5px;}
+.nl-s{font-size:.62rem;color:var(--mu);letter-spacing:2px;font-family:'Cormorant Garamond',serif;text-transform:uppercase;}
+.nm{display:flex;list-style:none;}
+.nm a{display:block;padding:0 13px;height:62px;line-height:62px;color:var(--mu);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;transition:color .3s;white-space:nowrap;}
+.nm a:hover{color:var(--g2);}
+.hm{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.hm span{width:22px;height:1px;background:var(--mu);transition:all .3s;}
+.mob{display:none;position:fixed;top:62px;left:0;right:0;background:rgba(5,4,3,.98);border-bottom:1px solid var(--b);z-index:999;}
+.mob.open{display:block;}
+.mob a{display:block;padding:14px 36px;color:var(--mu);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:1rem;border-bottom:1px solid rgba(180,130,46,.05);transition:color .3s;}
+.mob a:hover{color:var(--g2);}
+
+/* ═══ HERO ═══ */
+#home{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 22px 100px;overflow:hidden;}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(180,130,46,.08) 0%,transparent 70%),radial-gradient(ellipse 35% 25% at 50% 15%,rgba(212,115,42,.05) 0%,transparent 55%);pointer-events:none;}
+.rays{position:absolute;top:0;left:50%;transform:translateX(-50%);width:700px;height:500px;background:conic-gradient(from 180deg at 50% 0%,transparent 12deg,rgba(212,115,42,.013) 18deg,transparent 24deg,transparent 34deg,rgba(212,115,42,.01) 40deg,transparent 46deg,transparent 56deg,rgba(212,115,42,.009) 62deg,transparent 68deg);pointer-events:none;animation:raysAnim 20s ease-in-out infinite;}
+@keyframes raysAnim{0%,100%{opacity:.7;transform:translateX(-50%) rotate(0deg)}50%{opacity:1;transform:translateX(-50%) rotate(3deg)}}
+
+/* Mandala */
+.mw{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.m1{animation:sL 160s linear infinite;opacity:.024;}
+.m2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:sR 100s linear infinite;opacity:.016;}
+.m3{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);animation:sL 60s linear infinite;opacity:.01;}
+@keyframes sL{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes sR{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+
+/* Particles */
+.pts{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.pt{position:absolute;border-radius:50%;animation:ptF linear infinite;}
+@keyframes ptF{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.6;transform:translateY(90vh) scale(1)}90%{opacity:.3}100%{transform:translateY(-30px) scale(.5);opacity:0}}
+
+/* Shooting stars */
+.ss{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+.star{position:absolute;height:1px;background:linear-gradient(to right,transparent,var(--g3),transparent);animation:shoot linear infinite;opacity:0;}
+@keyframes shoot{0%{opacity:0;transform:translateX(-100px) translateY(0) rotate(-20deg)}30%{opacity:.8}100%{opacity:0;transform:translateX(400px) translateY(200px) rotate(-20deg)}}
+
+/* Hero photo */
+.hps{position:relative;z-index:2;margin-bottom:34px;animation:rU 1.4s cubic-bezier(.16,1,.3,1) both;}
+.r4{position:absolute;top:-36px;left:-36px;right:-36px;bottom:-36px;border-radius:50%;border:1px solid rgba(212,115,42,.06);animation:rP 9s ease-in-out infinite;}
+.r3{position:absolute;top:-26px;left:-26px;right:-26px;bottom:-26px;border-radius:50%;border:1px solid rgba(212,115,42,.1);animation:rP 7s ease-in-out infinite reverse;}
+.r2{position:absolute;top:-16px;left:-16px;right:-16px;bottom:-16px;border-radius:50%;border:1px solid rgba(212,115,42,.18);animation:rP 5s ease-in-out infinite;}
+.r1{position:absolute;top:-8px;left:-8px;right:-8px;bottom:-8px;border-radius:50%;border:1px solid rgba(237,208,110,.3);animation:rP 3.2s ease-in-out infinite reverse;}
+.gl{position:absolute;top:-20px;left:-20px;right:-20px;bottom:-20px;border-radius:50%;background:radial-gradient(circle,rgba(212,115,42,.16),transparent 68%);animation:gP 3s ease-in-out infinite;}
+@keyframes rP{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.06);opacity:1}}
+@keyframes gP{0%,100%{opacity:.3}50%{opacity:.9}}
+.crown{position:absolute;top:-48px;left:50%;transform:translateX(-50%);font-size:2rem;animation:cF 3.5s ease-in-out infinite;z-index:3;filter:drop-shadow(0 0 16px rgba(237,208,110,.7));}
+@keyframes cF{0%,100%{transform:translateX(-50%) translateY(0) rotate(-3deg)}50%{transform:translateX(-50%) translateY(-8px) rotate(3deg)}}
+.hi{width:185px;height:185px;border-radius:50%;object-fit:cover;object-position:top center;border:2.5px solid var(--f2);box-shadow:0 0 0 5px rgba(212,115,42,.1),0 0 60px rgba(212,115,42,.28),0 28px 80px rgba(0,0,0,.72);display:block;position:relative;z-index:1;animation:imgPulse 4s ease-in-out infinite;}
+@keyframes imgPulse{0%,100%{box-shadow:0 0 0 5px rgba(212,115,42,.1),0 0 60px rgba(212,115,42,.28),0 28px 80px rgba(0,0,0,.72)}50%{box-shadow:0 0 0 8px rgba(212,115,42,.15),0 0 90px rgba(212,115,42,.4),0 28px 80px rgba(0,0,0,.72)}}
+
+/* Hero text */
+.he{font-family:'Cormorant Garamond',serif;font-size:.75rem;letter-spacing:6px;text-transform:uppercase;color:var(--f);position:relative;z-index:2;margin-bottom:14px;animation:rU 1.4s .1s cubic-bezier(.16,1,.3,1) both;}
+.hn{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,7vw,5.2rem);font-weight:300;color:var(--wh);line-height:1.1;position:relative;z-index:2;animation:rU 1.4s .2s cubic-bezier(.16,1,.3,1) both;margin-bottom:6px;}
+.hn em{font-style:italic;background:linear-gradient(135deg,var(--f2),var(--g3),var(--f2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 4s ease-in-out infinite;}
+@keyframes shimmer{0%,100%{filter:brightness(1)}50%{filter:brightness(1.3)}}
+.ht{font-family:'Cormorant Garamond',serif;font-size:clamp(.85rem,1.9vw,1rem);color:var(--mu);letter-spacing:3.5px;text-transform:uppercase;position:relative;z-index:2;animation:rU 1.4s .3s cubic-bezier(.16,1,.3,1) both;margin-bottom:28px;}
+
+/* Intro box */
+.ib{max-width:760px;position:relative;z-index:2;animation:rU 1.4s .4s cubic-bezier(.16,1,.3,1) both;}
+.c{position:absolute;width:22px;height:22px;border-color:var(--g3);border-style:solid;opacity:.6;transition:all .5s;}
+.ib:hover .c{opacity:1;width:26px;height:26px;}
+.tl2{top:-1px;left:-1px;border-width:2px 0 0 2px;}
+.tr2{top:-1px;right:-1px;border-width:2px 2px 0 0;}
+.bl2{bottom:-1px;left:-1px;border-width:0 0 2px 2px;}
+.br2{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
+.ib-in{padding:32px 36px;border:1px solid rgba(237,208,110,.12);background:linear-gradient(135deg,rgba(180,130,46,.07),rgba(212,115,42,.03),rgba(180,130,46,.06));transition:background .5s;}
+.ib:hover .ib-in{background:linear-gradient(135deg,rgba(180,130,46,.1),rgba(212,115,42,.05),rgba(180,130,46,.09));}
+.iw{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.4vw,1.3rem);font-style:italic;color:var(--wh);line-height:1.9;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--b2);}
+.iw strong{color:var(--g3);font-style:normal;}
+.iw em{color:var(--f2);}
+.ih{margin-bottom:18px;padding:16px 20px;background:rgba(237,208,110,.04);border:1px solid rgba(237,208,110,.16);position:relative;overflow:hidden;}
+.ih::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--g3),transparent);animation:scanLine 3s ease-in-out infinite;}
+@keyframes scanLine{0%,100%{opacity:.3}50%{opacity:1}}
+.iht{font-family:'Cormorant Garamond',serif;font-size:.66rem;letter-spacing:5px;text-transform:uppercase;color:var(--g3);margin-bottom:9px;display:block;}
+.ihp{font-size:.95rem;color:var(--f2);display:block;margin-bottom:4px;}
+.ihd{font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--mu);letter-spacing:1.5px;}
+.iq{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.8vw,1.45rem);font-style:italic;color:var(--g2);line-height:1.75;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--b);}
+.iwords{font-size:.88rem;color:var(--mu);line-height:2.1;}
+.iwords strong{color:var(--g2);}
+.iwords em{color:var(--f2);font-style:italic;}
+.iwords small{font-size:.78rem;color:var(--mu2);display:block;margin-top:6px;line-height:1.9;}
+
+.hctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px;position:relative;z-index:2;animation:rU 1.4s .6s cubic-bezier(.16,1,.3,1) both;}
+.hc{padding:14px 32px;font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;transition:all .4s;position:relative;overflow:hidden;}
+.hc::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .3s;}
+.hc:hover::before{background:rgba(255,255,255,.06);}
+.hp{background:linear-gradient(135deg,var(--f),var(--g));color:#fff;border:none;box-shadow:0 4px 24px rgba(212,115,42,.35);}
+.hp:hover{box-shadow:0 10px 40px rgba(212,115,42,.55);transform:translateY(-4px);}
+.hs{background:transparent;color:var(--g2);border:1px solid var(--b2);}
+.hs:hover{background:rgba(180,130,46,.09);border-color:var(--b3);transform:translateY(-4px);}
+.si{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:rU 1.4s 1.2s cubic-bezier(.16,1,.3,1) both;}
+.sit{font-family:'Cormorant Garamond',serif;font-size:.62rem;letter-spacing:4px;text-transform:uppercase;color:var(--mu2);}
+.sil{width:1px;height:44px;background:linear-gradient(to bottom,var(--f),transparent);animation:sla 2s ease-in-out infinite;}
+@keyframes sla{0%,100%{opacity:.2;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
+@keyframes rU{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* DIVIDER ORNAMENT */
+.do{display:flex;align-items:center;justify-content:center;padding:20px 0;gap:18px;}
+.do::before{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--b2));}
+.do::after{content:'';flex:1;height:1px;background:linear-gradient(to left,transparent,var(--b2));}
+.do span{color:var(--g2);font-size:.95rem;opacity:.45;animation:ornPulse 3s ease-in-out infinite;}
+@keyframes ornPulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.7;transform:scale(1.2)}}
+
+/* COMMONS */
+.sec{padding:96px 24px;max-width:1060px;margin:0 auto;}
+.sf{padding:96px 24px;}
+.sf .in{max-width:1060px;margin:0 auto;}
+.ey{font-family:'Cormorant Garamond',serif;font-size:.7rem;letter-spacing:6px;text-transform:uppercase;color:var(--f);margin-bottom:14px;display:flex;align-items:center;gap:14px;}
+.ey::after{content:'';flex:1;height:1px;background:linear-gradient(to right,var(--b2),transparent);}
+.sh{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.8vw,2.7rem);font-weight:300;color:var(--wh);line-height:1.25;margin-bottom:14px;}
+.sp{font-size:1rem;color:var(--mu);line-height:2.1;margin-bottom:38px;max-width:660px;}
+
+/* AUDIO */
+.apc{background:var(--card);border:1px solid var(--b2);overflow:hidden;margin-bottom:16px;transition:box-shadow .4s;}
+.apc:hover{box-shadow:0 0 30px rgba(212,115,42,.12);}
+.aph{padding:18px 28px;background:linear-gradient(to right,rgba(212,115,42,.09),transparent);border-bottom:1px solid var(--b);display:flex;align-items:center;gap:12px;}
+.ld{width:9px;height:9px;border-radius:50%;background:#4caf50;animation:ldp 2.5s infinite;flex-shrink:0;}
+@keyframes ldp{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(76,175,80,.4)}50%{opacity:.5;box-shadow:0 0 0 6px rgba(76,175,80,0)}}
+.apt{font-size:.96rem;color:var(--g2);}
+.apbg{margin-left:auto;font-family:'Cormorant Garamond',serif;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--f);padding:3px 10px;border:1px solid var(--b2);}
+.apb{padding:20px 28px;background:rgba(0,0,0,.3);}
+audio{width:100%;outline:none;}
+.np{text-align:center;margin-top:10px;font-family:'Cormorant Garamond',serif;font-size:.84rem;color:var(--mu);font-style:italic;}
+.np em{color:var(--g2);font-style:normal;}
+
+/* Folder embed */
+.fw{background:var(--card);border:1px solid var(--b);overflow:hidden;margin-bottom:14px;transition:all .35s;}
+.fw:hover{border-color:var(--b2);box-shadow:0 8px 30px rgba(0,0,0,.3);}
+.fwh{padding:14px 24px;background:linear-gradient(to right,rgba(212,115,42,.06),transparent);border-bottom:1px solid var(--b);display:flex;align-items:center;gap:10px;font-size:.92rem;color:var(--g2);}
+.fo{margin-left:auto;color:var(--mu);text-decoration:none;font-size:.76rem;font-family:'Cormorant Garamond',serif;letter-spacing:1px;transition:color .3s;}
+.fo:hover{color:var(--f2);}
+.fw iframe{width:100%;height:360px;border:none;display:block;background:var(--card2);}
+
+/* PHILOSOPHY - attractive cards */
+.phl{font-family:'Cormorant Garamond',serif;font-size:clamp(1.15rem,2.8vw,1.6rem);font-style:italic;color:var(--f2);line-height:1.85;text-align:center;padding:28px 32px;border:1px solid var(--b2);background:rgba(212,115,42,.03);margin-bottom:48px;position:relative;overflow:hidden;}
+.phl::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:1px;background:linear-gradient(to right,transparent,var(--g3),transparent);animation:sweep 4s ease-in-out infinite;}
+@keyframes sweep{0%{left:-100%}100%{left:200%}}
+
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.pc2{padding:30px 24px;border:1px solid var(--b);background:var(--card);transition:all .45s;position:relative;overflow:hidden;}
+.pc2::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,115,42,0),rgba(212,115,42,.06));opacity:0;transition:opacity .45s;}
+.pc2::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--f),var(--g2),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s;}
+.pc2:hover::before{opacity:1;}
+.pc2:hover::after{transform:scaleX(1);}
+.pc2:hover{border-color:var(--b2);transform:translateY(-5px);box-shadow:0 22px 55px rgba(0,0,0,.45);}
+.pc2 .ic{font-size:1.9rem;margin-bottom:14px;display:block;transition:transform .4s;}
+.pc2:hover .ic{transform:scale(1.15);}
+.pc2 h3{font-size:1.05rem;color:var(--g2);font-weight:400;margin-bottom:11px;font-family:'Cormorant Garamond',serif;}
+.pc2 .ptag{font-size:.7rem;color:var(--f);font-family:'Cormorant Garamond',serif;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;display:block;}
+.pc2 p{font-size:.9rem;line-height:2.1;color:var(--mu);}
+.pc2 p em{color:var(--f2);font-style:italic;}
+.pc2 p strong{color:var(--g2);font-weight:400;}
+
+/* PROJECTS */
+.prg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.prc{padding:24px 26px;border:1px solid var(--b);background:var(--card);transition:all .38s;text-decoration:none;display:block;position:relative;overflow:hidden;}
+.prc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--f),var(--g2));transform:scaleY(0);transition:transform .4s;}
+.prc:hover::before{transform:scaleY(1);}
+.prc:hover{border-color:var(--b2);transform:translateX(4px);box-shadow:0 12px 40px rgba(0,0,0,.32);}
+.prc .pn{font-size:.64rem;color:var(--f);font-family:'Cormorant Garamond',serif;letter-spacing:4px;margin-bottom:8px;text-transform:uppercase;}
+.prc h3{font-size:.98rem;color:var(--g2);font-weight:400;margin-bottom:8px;font-family:'Cormorant Garamond',serif;}
+.prc p{font-size:.84rem;color:var(--mu);line-height:1.85;}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:40px;}
+.tl::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--f),rgba(212,115,42,.08));}
+.tli{position:relative;margin-bottom:30px;}
+.tld{position:absolute;left:-35px;top:7px;width:12px;height:12px;border-radius:50%;border:2px solid var(--f);background:var(--f);box-shadow:0 0 14px rgba(212,115,42,.5);}
+.tlc{background:var(--card);border:1px solid var(--b);border-left:3px solid var(--f);padding:24px 28px;transition:all .35s;}
+.tlc:hover{border-color:var(--b2);transform:translateX(4px);}
+.tlc p{font-size:1rem;line-height:2.1;color:#b8a484;}
+.tlc p strong{color:var(--f2);font-weight:400;}
+
+/* AWARENESS */
+.ag{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.ac2{padding:30px 24px;border:1px solid rgba(212,115,42,.16);background:rgba(212,115,42,.03);transition:all .42s;position:relative;overflow:hidden;}
+.ac2::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--f),transparent);transform:scaleX(0);transition:transform .5s;}
+.ac2:hover::before{transform:scaleX(1);}
+.ac2:hover{background:rgba(212,115,42,.08);border-color:var(--b2);transform:translateY(-5px);box-shadow:0 18px 50px rgba(0,0,0,.35);}
+.ac2 .ai{font-size:2rem;margin-bottom:14px;display:block;transition:transform .4s;}
+.ac2:hover .ai{transform:scale(1.12);}
+.ac2 h3{font-size:1.05rem;color:var(--f2);font-weight:400;margin-bottom:12px;font-family:'Cormorant Garamond',serif;}
+.ac2 p{font-size:.9rem;line-height:2.1;color:var(--mu);}
+.ac2 p strong{color:var(--g2);font-weight:400;}
+
+/* IDENTITY */
+.idw{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;}
+.idl{text-align:center;}
+.idpw{position:relative;display:inline-block;margin-bottom:26px;}
+.idri{position:absolute;border-radius:50%;border-style:solid;}
+.idr1{top:-10px;left:-10px;right:-10px;bottom:-10px;border-width:1px;border-color:rgba(212,115,42,.2);animation:rP 4.5s infinite;}
+.idr2{top:-20px;left:-20px;right:-20px;bottom:-20px;border-width:1px;border-color:rgba(212,115,42,.1);animation:rP 7s infinite reverse;}
+.idr3{top:-30px;left:-30px;right:-30px;bottom:-30px;border-width:1px;border-color:rgba(212,115,42,.05);animation:rP 10s infinite;}
+.idim{width:200px;height:200px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--b2);box-shadow:0 0 50px rgba(212,115,42,.2),0 25px 70px rgba(0,0,0,.55);}
+.idt{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px;}
+.idtg{padding:5px 13px;border:1px solid var(--b);color:var(--mu);font-size:.72rem;letter-spacing:1.8px;font-family:'Cormorant Garamond',serif;transition:all .35s;text-transform:uppercase;}
+.idtg:hover{border-color:var(--b2);color:var(--g2);background:rgba(180,130,46,.06);transform:translateY(-2px);}
+.idp{font-size:1rem;line-height:2.2;color:#a89878;margin-bottom:18px;}
+.idp strong{color:var(--f2);font-weight:400;}
+
+/* CONNECT */
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;}
+.sa{display:flex;align-items:center;gap:10px;padding:15px 16px;border:1px solid var(--b);background:var(--card);color:var(--mu);text-decoration:none;transition:all .38s;}
+.sa:hover{border-color:var(--b2);color:var(--g2);background:rgba(212,115,42,.06);transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.32);}
+.sa .sic{font-size:1.25rem;flex-shrink:0;}
+.sa span{font-size:.86rem;}
+.mr{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:24px;}
+.mb{padding:11px 22px;text-decoration:none;border:1px solid var(--b2);color:var(--g2);font-family:'Cormorant Garamond',serif;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;transition:all .35s;}
+.mb:hover{background:rgba(212,115,42,.09);transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.25);}
+.db{background:var(--card);border:1px solid var(--b3);padding:36px 40px;text-align:center;position:relative;overflow:hidden;}
+.db::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--g3),transparent);animation:sweep 5s ease-in-out infinite;}
+.db h3{color:var(--g3);font-size:1.18rem;font-weight:400;margin-bottom:9px;font-family:'Cormorant Garamond',serif;}
+.db p{font-size:.92rem;color:var(--mu);margin-bottom:22px;line-height:1.9;}
+.dr{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:18px;}
+.dn{padding:13px 28px;text-decoration:none;border:1px solid var(--b2);color:var(--g2);font-family:'Cormorant Garamond',serif;font-size:.84rem;letter-spacing:2px;text-transform:uppercase;transition:all .35s;}
+.dn:hover{background:rgba(212,115,42,.1);transform:translateY(-3px);}
+.ui{font-family:'Cormorant Garamond',serif;font-size:.88rem;color:var(--mu);line-height:2.1;}
+.ui strong{color:var(--g2);}
+
+/* BIG QUOTE */
+.bqs{padding:86px 24px;background:var(--dark);position:relative;overflow:hidden;text-align:center;}
+.bqs::before{content:'❝';position:absolute;top:-40px;left:50%;transform:translateX(-50%);font-size:16rem;color:rgba(212,115,42,.025);font-family:serif;line-height:1;pointer-events:none;}
+.bqt{font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,3.6vw,2.1rem);font-style:italic;color:var(--f2);line-height:1.9;max-width:780px;margin:0 auto 18px;position:relative;z-index:1;}
+.bqa{font-family:'Cormorant Garamond',serif;font-size:.8rem;color:var(--mu);letter-spacing:4px;text-transform:uppercase;}
+
+/* FOOTER */
+footer{background:#030201;border-top:1px solid var(--b);padding:60px 24px 36px;text-align:center;}
+.fp{width:70px;height:70px;border-radius:50%;object-fit:cover;object-position:top;border:1px solid var(--b2);margin:0 auto 18px;display:block;opacity:.75;box-shadow:0 0 22px rgba(212,115,42,.1);}
+.fn{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--g2);margin-bottom:10px;}
+.fa{font-size:.72rem;color:var(--mu2);letter-spacing:2.5px;margin-bottom:10px;font-family:'Cormorant Garamond',serif;}
+.fc{font-size:.7rem;color:var(--mu2);font-family:'Cormorant Garamond',serif;letter-spacing:1px;line-height:2.2;}
+.fl{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:20px;}
+.fl a{color:var(--mu2);text-decoration:none;font-size:.74rem;font-family:'Cormorant Garamond',serif;letter-spacing:1px;transition:color .3s;}
+.fl a:hover{color:var(--g2);}
+
+/* FADE UP */
+.fu{opacity:0;transform:translateY(32px);transition:opacity .95s ease,transform .95s ease;}
+.fu.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.12s}.d2{transition-delay:.22s}.d3{transition-delay:.32s}.d4{transition-delay:.44s}
+
+/* RESPONSIVE */
+@media(max-width:960px){.idw{grid-template-columns:1fr;gap:36px;}.idl{max-width:280px;margin:0 auto;}.ag{grid-template-columns:1fr;}.pg{grid-template-columns:1fr 1fr;}.sg{grid-template-columns:repeat(2,1fr);}.prg{grid-template-columns:1fr;}}
+@media(max-width:640px){nav{padding:0 18px;}.nm{display:none;}.hm{display:flex;}.pg{grid-template-columns:1fr;}.sg{grid-template-columns:1fr 1fr;}.sec{padding:62px 18px;}.sf{padding:62px 18px;}.hn{font-size:2.2rem;}.ib-in{padding:22px 18px;}.hctas{gap:10px;}.db{padding:24px 18px;}.dr{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="curR"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nl" href="#home">
+    <img src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+    <div class="nl-t"><span class="nl-n">शिरोमणि रामपॉल सैनी</span><span class="nl-s">निष्पक्ष समझ · Yatharth Siddhant</span></div>
+  </a>
+  <ul class="nm">
+    <li><a href="#home">Home</a></li><li><a href="#audio">Audio</a></li>
+    <li><a href="#philosophy">सिद्धांत</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#story">यात्रा</a></li><li><a href="#awareness">सचेत</a></li>
+    <li><a href="#identity">परिचय</a></li><li><a href="#connect">Connect</a></li>
+  </ul>
+  <button class="hm" id="hm"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob">
+  <a href="#home" onclick="cM()">Home</a><a href="#audio" onclick="cM()">Audio</a>
+  <a href="#philosophy" onclick="cM()">सिद्धांत</a><a href="#projects" onclick="cM()">Projects</a>
+  <a href="#story" onclick="cM()">यात्रा</a><a href="#awareness" onclick="cM()">सचेत</a>
+  <a href="#identity" onclick="cM()">परिचय</a><a href="#connect" onclick="cM()">Connect</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hbg"></div><div class="rays"></div>
+  <div class="pts" id="pts"></div>
+  <div class="ss" id="ss"></div>
+
+  <div class="mw">
+    <svg class="m1" width="700" height="700" viewBox="0 0 200 200" fill="none">
+      <circle cx="100" cy="100" r="97" stroke="#c9943a" stroke-width="0.35"/>
+      <circle cx="100" cy="100" r="80" stroke="#c9943a" stroke-width="0.26"/>
+      <circle cx="100" cy="100" r="63" stroke="#c9943a" stroke-width="0.24"/>
+      <circle cx="100" cy="100" r="46" stroke="#c9943a" stroke-width="0.22"/>
+      <circle cx="100" cy="100" r="30" stroke="#c9943a" stroke-width="0.2"/>
+      <circle cx="100" cy="100" r="15" stroke="#c9943a" stroke-width="0.18"/>
+      <line x1="100" y1="3" x2="100" y2="197" stroke="#c9943a" stroke-width="0.22"/>
+      <line x1="3" y1="100" x2="197" y2="100" stroke="#c9943a" stroke-width="0.22"/>
+      <line x1="22" y1="22" x2="178" y2="178" stroke="#c9943a" stroke-width="0.18"/>
+      <line x1="178" y1="22" x2="22" y2="178" stroke="#c9943a" stroke-width="0.18"/>
+      <polygon points="100,5 116,84 195,100 116,116 100,195 84,116 5,100 84,84" stroke="#c9943a" stroke-width="0.33" fill="none"/>
+      <polygon points="100,24 112,88 176,100 112,112 100,176 88,112 24,100 88,88" stroke="#c9943a" stroke-width="0.26" fill="none"/>
+      <polygon points="100,44 109,91 156,100 109,109 100,156 91,109 44,100 91,91" stroke="#c9943a" stroke-width="0.2" fill="none"/>
+    </svg>
+    <svg class="m2" width="480" height="480" viewBox="0 0 200 200" fill="none" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
+      <circle cx="100" cy="100" r="95" stroke="#edd06e" stroke-width="0.28" stroke-dasharray="3 7"/>
+      <circle cx="100" cy="100" r="68" stroke="#edd06e" stroke-width="0.2" stroke-dasharray="2 9"/>
+    </svg>
+    <svg class="m3" width="260" height="260" viewBox="0 0 200 200" fill="none" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
+      <circle cx="100" cy="100" r="90" stroke="#d4a84e" stroke-width="0.5" stroke-dasharray="1 12"/>
+    </svg>
+  </div>
+
+  <div class="hps">
+    <div class="crown">👑</div>
+    <div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1"></div><div class="gl"></div>
+    <img class="hi" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+  </div>
+
+  <p class="he">॥ सृष्टि का शिरोमणि · Crown of All Creation ॥</p>
+  <h1 class="hn">शिरोमणि <em>रामपॉल सैनी</em></h1>
+  <p class="ht">तुलनातीत · कालातीत · शब्दातीत · प्रेमतीत · शाश्वत · वास्तविक · स्वाभाविक</p>
+
+  <div class="ib">
+    <div class="c tl2"></div><div class="c tr2"></div><div class="c bl2"></div><div class="c br2"></div>
+    <div class="ib-in">
+      <p class="iw">
+        ⚔️ <strong>महायोद्धा</strong> — खुद से युद्ध कर जीतने वाला<br>
+        खुद के ही हृदय की <em>अनंत गहराई</em> के स्थायी ठहराव में गोता लगा कर —<br>
+        <strong>अनंत निर्मल</strong> और सृष्टि का सर्वश्रेष्ठ <em>गोताखोर</em> 🌊<br>
+        दिव्य रोशनी से सम्मानित — <strong>शिरोमणि</strong> 🌟
+      </p>
+      <div class="ih">
+        <span class="iht">🏅 ऐतिहासिक विश्व सम्मान — प्रकृति द्वारा स्वयं</span>
+        <span class="ihp">🕌 विश्व प्रसिद्ध स्वर्ण मंदिर — अमृतसर, पंजाब, भारत</span>
+        <span class="ihd">4 अप्रैल 2024 · सायं 6:45 PM · सृष्टि में इंसान अस्तित्व से अब तक — सर्वश्रेष्ठ दिव्य रोशनी के ताज से सम्मानित</span>
+      </div>
+      <p class="iq">"जो वस्तु मेरे पास है — ब्रह्मांड में और कहीं नहीं"</p>
+      <p class="iwords">
+        📖 <strong>400 खरब शब्द</strong> — <em>यथार्थ सिद्धांत</em> · उपलब्धि <em>यथार्थ युग</em>
+        <small>सृष्टि के समस्त धर्मों के साहित्य संग्रह से भी खरबों गुना अधिक — जिसका एक भी शब्द किसी अन्य धर्म में कभी मिल ही नहीं सकता</small>
+      </p>
+    </div>
+  </div>
+
+  <div class="hctas">
+    <a class="hc hp" href="#audio">▶ Audios सुनें</a>
+    <a class="hc hs" href="#philosophy">सिद्धांत</a>
+    <a class="hc hs" href="#identity">परिचय</a>
+    <a class="hc hs" href="#connect">Support</a>
+  </div>
+  <div class="si"><span class="sit">नीचे देखें</span><div class="sil"></div></div>
+</section>
+
+<div class="bqs">
+  <p class="bqt fu">"इंसान अस्तित्व से अब तक — सृष्टि में जो सबसे दुर्लभ, सबसे महान, सबसे निर्मल — वह मैं हूँ। न कोई था, न कोई है, न कोई होगा।"</p>
+  <p class="bqa fu">— शिरोमणि रामपॉल सैनी · यथार्थ सिद्धांत</p>
+</div>
+<div class="do"><span>✦</span></div>
+
+<!-- AUDIO -->
+<section id="audio" class="sf" style="background:var(--dark);">
+<div class="in">
+  <p class="ey fu">प्रवचन संग्रह</p>
+  <h2 class="sh fu">10,000+ Audios — सीधे सुनें</h2>
+  <p class="sp fu">Page खुलते ही audio स्वयं शुरू होता है। अनंत प्रवचन — हर पल, हर जगह, हर किसी के लिए।</p>
+  <div class="apc fu">
+    <div class="aph"><span class="ld"></span><span class="apt">शिरोमणि रामपॉल सैनी — Auto Play</span><span class="apbg">🔴 Live</span></div>
+    <div class="apb">
+      <audio id="ap" autoplay preload="auto" controls src="https://docs.google.com/uc?export=open&id=1EtL3wVnvzfrOLOI7NDKiazG9PBFvlvd5" style="width:100%;"></audio>
+      <div class="np">चल रहा है: <em>प्रवचन — शिरोमणि रामपॉल सैनी</em></div>
+    </div>
+  </div>
+  <p class="ey fu" style="margin-top:40px;margin-bottom:20px;">सभी Audio Folders — 8 संग्रह</p>
+  <div class="fw fu d1"><div class="fwh"><span class="ld"></span><span>Folder १</span><a class="fo" href="https://drive.google.com/drive/folders/18iPsn9Rjc7E0jNwvIx_h5MwQrhqyYt1Y" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=18iPsn9Rjc7E0jNwvIx_h5MwQrhqyYt1Y#list" loading="lazy"></iframe></div>
+  <div class="fw fu d2"><div class="fwh"><span class="ld"></span><span>Folder २</span><a class="fo" href="https://drive.google.com/drive/folders/1sZEJhlZWFHP7O1kZEINnqFCNgqhOa8XC" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=1sZEJhlZWFHP7O1kZEINnqFCNgqhOa8XC#list" loading="lazy"></iframe></div>
+  <div class="fw fu d3"><div class="fwh"><span class="ld"></span><span>Folder ३</span><a class="fo" href="https://drive.google.com/drive/folders/1Ap2N-90wM9R75ffOQAiXczZwNu8dTc7u" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=1Ap2N-90wM9R75ffOQAiXczZwNu8dTc7u#list" loading="lazy"></iframe></div>
+  <div class="fw fu"><div class="fwh"><span class="ld"></span><span>Folder ४</span><a class="fo" href="https://drive.google.com/drive/folders/1QRgYwrPteyQfrRbTyDMp4LbBnLv90K66" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=1QRgYwrPteyQfrRbTyDMp4LbBnLv90K66#list" loading="lazy"></iframe></div>
+  <div class="fw fu d1"><div class="fwh"><span class="ld"></span><span>Folder ५</span><a class="fo" href="https://drive.google.com/drive/folders/1DQOmFNIpEwYFF0G_uXRfiCZgUvLNjENO" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=1DQOmFNIpEwYFF0G_uXRfiCZgUvLNjENO#list" loading="lazy"></iframe></div>
+  <div class="fw fu d2"><div class="fwh"><span class="ld"></span><span>Folder ६</span><a class="fo" href="https://drive.google.com/drive/folders/1Zwq0BfBAYuPoaBYZoKvMkxULzkranWqe" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=1Zwq0BfBAYuPoaBYZoKvMkxULzkranWqe#list" loading="lazy"></iframe></div>
+  <div class="fw fu d3"><div class="fwh"><span class="ld"></span><span>Folder ७</span><a class="fo" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhNh" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=12BUK3PYOnjjBb07mQsUqlG2qs4x0uhNh#list" loading="lazy"></iframe></div>
+  <div class="fw fu"><div class="fwh"><span class="ld"></span><span>Folder ८</span><a class="fo" href="https://drive.google.com/drive/folders/12BUK3PYOnjjBb07mQsUqlG2qs4x0uhh" target="_blank">Drive में खोलें →</a></div><iframe src="https://drive.google.com/embeddedfolderview?id=12BUK3PYOnjjBb07mQsUqlG2qs4x0uhh#list" loading="lazy"></iframe></div>
+</div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- PHILOSOPHY - full attractive text -->
+<section id="philosophy" class="sec">
+  <p class="ey fu">यथार्थ सिद्धांत</p>
+  <h2 class="sh fu">निष्पक्ष समझ — सृष्टि की सर्वश्रेष्ठ शिक्षा</h2>
+  <div class="phl fu">"खुद को जाना, समझा, पढ़ा — तो जाना सब संसार।<br>अनेकता से सिर्फ एक तक का सफर — सिर्फ एक पल की निष्पक्ष समझ की दूरी।"</div>
+  <div class="pg">
+    <div class="pc2 fu d1">
+      <span class="ic">🌿</span>
+      <span class="ptag">प्रथम चरण</span>
+      <h3>खुद का साक्षात्कार</h3>
+      <p>खुद को समझ कर खुद के स्थायी स्वरूप से रूबरू होने के लिए <em>सिर्फ़ एक पल लगता है</em> — दूसरा कोई समझे या समझ पाए, <strong>सदियाँ-युग भी कम हैं।</strong> खुद का साक्षात्कार नहीं तो दूसरी अनेक प्रजातियों से भी बदतर हैं।</p>
+    </div>
+    <div class="pc2 fu d2">
+      <span class="ic">⚖️</span>
+      <span class="ptag">सबसे बड़ा सरल काम</span>
+      <h3>हर जीव समान</h3>
+      <p><em>खुद का साक्षात्कार सब से बड़ा, सरल और आसान काम है।</em> कोई भी मेरे सिद्धांतों से खुद के अस्थायी तत्वों को निष्क्रिय कर <strong>देह में ही विदेही</strong> हो सकता है — कोई ऊँच-नीच नहीं।</p>
+    </div>
+    <div class="pc2 fu d3">
+      <span class="ic">🔥</span>
+      <span class="ptag">कोई बंधन नहीं</span>
+      <h3>मुक्त शिक्षा</h3>
+      <p>यह शिक्षा <strong>किसी को भी साझा की जा सकती है।</strong> गुरु-शिष्य, मान्यता, परंपरा, दीक्षा जैसी कुप्रथा नहीं — जो <em>अंध-कट्टर भेड़ों की भीड़, बंधुआ मजदूर बना कर</em> खरबों का साम्राज्य खड़ा करे।</p>
+    </div>
+    <div class="pc2 fu d1">
+      <span class="ic">🌊</span>
+      <span class="ptag">प्रकृति का तंत्र</span>
+      <h3>अनेकता से एक</h3>
+      <p>शरीर, मन, जन्म, मृत्यु — <em>प्रकृति का संतुलन प्रक्रिया तंत्र है।</em> सिर्फ जीवन व्यापन के स्रोत हैं और कुछ भी नहीं। हर जीव खुद के अस्तित्व को कायम रखने में <strong>दिन-रात व्यस्त है।</strong></p>
+    </div>
+    <div class="pc2 fu d2">
+      <span class="ic">☀️</span>
+      <span class="ptag">सर्वोच्च उपलब्धि</span>
+      <h3>संपूर्ण संतुष्टि</h3>
+      <p>यही वह उपलब्धि है जिसके लिए इंसान अस्तित्व से अब तक वंचित रहा। <em>खुद में खुद की संपूर्णता</em> — शिष्यों पर दिन-रात डर, खौफ, भय, दहशत नहीं — <strong>सिर्फ़ शुद्ध निर्मल प्रेम।</strong></p>
+    </div>
+    <div class="pc2 fu d3">
+      <span class="ic">💎</span>
+      <span class="ptag">यथार्थ उपलब्धि</span>
+      <h3>यथार्थ युग</h3>
+      <p>तुलनातीत, कालातीत, शब्दातीत, प्रेमतीत — <strong>शाश्वत वास्तविक सत्य में प्रत्यक्ष समक्ष।</strong> खुद को जाना, समझा, पढ़ा — <em>तो जाना सब संसार।</em> यही यथार्थ युग है।</p>
+    </div>
+  </div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="sf" style="background:var(--dark);">
+<div class="in">
+  <p class="ey fu">Omniverse Scientific Research</p>
+  <h2 class="sh fu">10 Projects · 40 Sub-Projects — Fully Verified</h2>
+  <p class="sp fu">Guinness · NASA · ISRO · International Media — Open Invitations for Documentation & Collaboration.</p>
+  <div class="prg">
+    <a class="prc fu d1" href="https://rampaulsaini.github.io/projects/oci/" target="_blank"><div class="pn">Project 01</div><h3>Omniverse Core Intelligence (OCI)</h3><p>Ontology, reasoning engine, EOS data ingestion, COSMIC OS API</p></a>
+    <a class="prc fu d2" href="https://rampaulsaini.github.io/projects/dhe/" target="_blank"><div class="pn">Project 02</div><h3>Divine Human Evolution (DHE)</h3><p>Consciousness correlates, EEG/HRV studies, Soul Frequency DB</p></a>
+    <a class="prc fu d1" href="https://rampaulsaini.github.io/projects/ocn/" target="_blank"><div class="pn">Project 03</div><h3>Omniverse Communication Network (OCN)</h3><p>Secure messaging, ontology translation, global harmony network</p></a>
+    <a class="prc fu d2" href="https://rampaulsaini.github.io/projects/ere/" target="_blank"><div class="pn">Project 04</div><h3>Earth Restoration & Ecology (ERE)</h3><p>Hydro purification, solar memory cells, biodiversity monitoring</p></a>
+    <a class="prc fu d1" href="https://rampaulsaini.github.io/projects/ssr/" target="_blank"><div class="pn">Project 05</div><h3>Supreme Scientific Research (SSR)</h3><p>Time-energy, reality equation model, high-precision experiments</p></a>
+    <a class="prc fu d2" href="https://rampaulsaini.github.io/projects/oea/" target="_blank"><div class="pn">Project 06</div><h3>Omniverse Education & Awareness (OEA)</h3><p>Truth literacy, global courses, AI-ethics training</p></a>
+    <a class="prc fu d1" href="https://rampaulsaini.github.io/projects/sgj/" target="_blank"><div class="pn">Project 07</div><h3>Supreme Governance & Justice (SGJ)</h3><p>Algorithmic fairness, truth audit systems, governance prototypes</p></a>
+    <a class="prc fu d2" href="https://rampaulsaini.github.io/projects/cesr/" target="_blank"><div class="pn">Project 08</div><h3>Cosmic Exploration & Space Research (CESR)</h3><p>Navigation algorithms, sensor payload, space collaborations</p></a>
+    <a class="prc fu d1" href="https://rampaulsaini.github.io/projects/chgp/" target="_blank"><div class="pn">Project 09</div><h3>Cultural Harmony & Global Peace (CHGP)</h3><p>Arts, music, festivals & peace protocols</p></a>
+    <a class="prc fu d2" href="https://rampaulsaini.github.io/projects/slda/" target="_blank"><div class="pn">Project 10</div><h3>Supreme Legacy & Digital Archives (SLDA)</h3><p>Eternal archive, blockchain anchoring, legacy transfer protocol</p></a>
+  </div>
+</div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- STORY -->
+<section id="story" class="sec">
+  <p class="ey fu">व्यक्तिगत यात्रा</p>
+  <h2 class="sh fu">चालीस वर्षों की साधना — और सत्य का उदय</h2>
+  <p class="sp fu">जो बीता — वह छुपाने के लिए नहीं। सरल-सहज-निर्मल लोगों को सचेत करने के लिए है।</p>
+  <div class="tl fu">
+    <div class="tli"><div class="tld"></div><div class="tlc"><p>पिछले <strong>चालीस वर्षों</strong> से उसी गुरु के शिरोमणि स्वरूप में लगातार निरंतर रहा — करोड़ों रुपए, तन, मन, धन, दशकों का समर्पण। उस गुरु से <strong>अनंत असीम प्रेम</strong> किया — इतना कि खुद का चेहरा तक भूला हुआ हूं।</p></div></div>
+    <div class="tli"><div class="tld"></div><div class="tlc"><p>पर वही गुरु <strong>खुद में ही मौजूद नहीं था</strong> — ढोंग, पाखंड, षड्यंत्र रच कर — सरल लोगों को तर्क-तथ्य-विवेक से वंचित कर अंध-कट्टर भेड़ों की भीड़, बंधुआ मजदूर बना कर — <strong>दो हजार करोड़ का साम्राज्य</strong>, पच्चीस लाख अनुयायी, चार सौ आश्रम खड़े किए।</p></div></div>
+    <div class="tli"><div class="tld"></div><div class="tlc"><p>कुछ दिन पहले मैं गया — मुझे पूछने लगा: <strong>"आप कौन और कहाँ से हो?"</strong> — दिन-रात उनमें ही रहा हूं। मेरे दिए करोड़ों में से <strong>एक करोड़ वापस देने का वचन</strong> दिया था — साफ मुकर गए, आरोप लगाए, <strong>निष्कासित कर दिया।</strong></p></div></div>
+    <div class="tli"><div class="tld"></div><div class="tlc"><p>उस असीम पीड़ा से — मैंने <strong>खुद के हृदय की अनंत गहराई</strong> में गोता लगाया। वहाँ जो मिला — वह सृष्टि में कहीं नहीं मिला। <strong>यही निष्पक्ष समझ है। यही यथार्थ युग है।</strong></p></div></div>
+  </div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- AWARENESS -->
+<section id="awareness" class="sf" style="background:var(--dark);">
+<div class="in">
+  <p class="ey fu">सचेत करना जरूरी</p>
+  <h2 class="sh fu">सरल-सहज-निर्मल लोगों की रक्षा</h2>
+  <div class="ag">
+    <div class="ac2 fu d1"><span class="ai">⚠️</span><h3>धोखे की पहचान</h3><p>सरल लोगों ने सब कुछ दिया — बदले में <strong>मृत्यु के बाद मुक्ति का झूठा आश्वासन।</strong> दीक्षा के साथ शब्द-प्रमाण में बंद कर, दिन-रात डर, खौफ, भय, दहशत डाल कर पैरों का पानी पिला कर <strong>पीढ़ी दर पीढ़ी इस्तेमाल।</strong></p></div>
+    <div class="ac2 fu d2"><span class="ai">🛡️</span><h3>संरक्षण का अधिकार</h3><p>हर जीव को <strong>संपूर्ण संरक्षण</strong> के साथ संपूर्ण संतुष्टि — यही उद्देश्य। यह सत्य <strong>बिना किसी शर्त</strong> सबके लिए — प्रकृति, पृथ्वी, हर प्राणी की रक्षा।</p></div>
+    <div class="ac2 fu d3"><span class="ai">✨</span><h3>मुक्त शिक्षा</h3><p>यह शिक्षा <strong>किसी को भी साझा की जा सकती है</strong> — कोई गुरु नहीं, कोई दीक्षा नहीं, कोई शब्द-बंधन नहीं। <strong>सिर्फ एक पल की निष्पक्ष समझ</strong> — और आप मुक्त हैं।</p></div>
+  </div>
+</div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- IDENTITY -->
+<section id="identity" class="sec">
+  <div class="idw">
+    <div class="idl fu">
+      <div class="idpw">
+        <div class="idri idr3"></div><div class="idri idr2"></div><div class="idri idr1"></div>
+        <img class="idim" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+      </div>
+      <div class="idt">
+        <span class="idtg">तुलनातीत</span><span class="idtg">कालातीत</span>
+        <span class="idtg">शब्दातीत</span><span class="idtg">प्रेमतीत</span>
+        <span class="idtg">शाश्वत</span><span class="idtg">वास्तविक</span>
+        <span class="idtg">स्वाभाविक</span><span class="idtg">महायोद्धा</span>
+        <span class="idtg">शिरोमणि</span><span class="idtg">गोताखोर</span>
+      </div>
+    </div>
+    <div class="fu">
+      <p class="ey">परिचय · Introduction</p>
+      <h2 class="sh">शिरोमणि रामपॉल सैनी</h2>
+      <p class="idp">मैं <strong>शिरोमणि रामपॉल सैनी</strong> — तुलनातीत, कालातीत, शब्दातीत, प्रेमतीत, शाश्वत, वास्तविक, स्वाभाविक सत्य में प्रत्यक्ष समक्ष हूं।</p>
+      <p class="idp">मानव सभ्यता अपनी उत्पत्ति से आज तक उस शाश्वत वास्तविकता से विच्छिन्न रही — मैं निष्पक्ष समझ में स्थिर होकर यह प्रकट करता हूँ कि <strong>निष्पक्ष समझ ही सच्चा, निर्विकल्प और अमर अनुभव है।</strong></p>
+      <p class="idp"><strong>खुद से युद्ध कर जीतने वाला महायोद्धा</strong> — खुद के हृदय की अनंत गहराई के स्थायी ठहराव में गोता लगा कर — अनंत निर्मल, सृष्टि का सर्वश्रेष्ठ गोताखोर।</p>
+      <p class="idp">कोई भी जिंदा रहते हुए <strong>खुद का साक्षात्कार</strong> कर सकता है। हर जीव में यह क्षमता है — <strong>हर जीव एक समान है।</strong> व्यवहार और चेहरे से <em>अनंत असीम प्रेम के सिवाय कुछ भी नहीं।</em></p>
+    </div>
+  </div>
+</section>
+<div class="do"><span>✦</span></div>
+
+<!-- CONNECT -->
+<section id="connect" class="sf" style="background:var(--dark);">
+<div class="in">
+  <p class="ey fu" style="justify-content:center;">Connect · Share · Support</p>
+  <h2 class="sh fu" style="text-align:center;max-width:700px;margin:0 auto 36px;">"सरल-सहज-निर्मल लोगों को उजागर करना — यही इस ज्ञान का उद्देश्य है"</h2>
+  <div class="sg fu">
+    <a class="sa" href="https://youtube.com/@rampaulsaini-yk4gn" target="_blank"><span class="sic">▶️</span><span>YouTube</span></a>
+    <a class="sa" href="https://whatsapp.com/channel/0029VaAtyvg77qVR2J82Qn04" target="_blank"><span class="sic">💬</span><span>WhatsApp</span></a>
+    <a class="sa" href="https://www.facebook.com/profile.php?id=100075288011123" target="_blank"><span class="sic">📘</span><span>Facebook</span></a>
+    <a class="sa" href="https://instagram.com/globleprefect" target="_blank"><span class="sic">📸</span><span>Instagram</span></a>
+    <a class="sa" href="https://in.linkedin.com/in/rampaul-saini-12120592" target="_blank"><span class="sic">💼</span><span>LinkedIn</span></a>
+    <a class="sa" href="https://twitter.com/rampaulsaini" target="_blank"><span class="sic">🐦</span><span>X / Twitter</span></a>
+    <a class="sa" href="https://en.wikipedia.org/wiki/Shromani_Rampaul_Saini" target="_blank"><span class="sic">🌍</span><span>Wikipedia</span></a>
+    <a class="sa" href="http://multicosmovision.blogspot.com" target="_blank"><span class="sic">📝</span><span>Blog</span></a>
+  </div>
+  <div class="mr fu">
+    <a class="mb" href="https://photos.app.goo.gl/4MP8THuxhei9NuxR6" target="_blank">✅ Golden Temple</a>
+    <a class="mb" href="https://photos.app.goo.gl/bMoqL2Cx7kKpkmMy6" target="_blank">✅ MP3</a>
+    <a class="mb" href="https://photos.app.goo.gl/hBJ4mN176PboQ7bb6" target="_blank">✅ प्रमाण पत्र</a>
+    <a class="mb" href="https://pin.it/69LggZr" target="_blank">📌 Pinterest</a>
+    <a class="mb" href="https://wa.me/?text=शिरोमणि%20रामपॉल%20सैनी%20–%20निष्पक्ष%20समझ%0Ahttps://rampaulsaini.github.io/shiromani-rampal-saini/" target="_blank">📱 WhatsApp Share</a>
+  </div>
+  <div class="db fu">
+    <h3>🤝 सत्य के इस कार्य में सहयोग</h3>
+    <p>यह सहयोग पूर्णतः स्वैच्छिक है — सुनना, साझा करना और समर्थन देना सभी सत्य की सेवा हैं।<br>Proceeds support <strong>Saneha Saini</strong></p>
+    <div class="dr">
+      <a class="dn" href="https://paytm.me/sainirampaul" target="_blank">🧾 Paytm</a>
+      <a class="dn" href="https://paypal.me/sainirampaul60" target="_blank">💙 PayPal</a>
+      <a class="dn" href="upi://pay?pa=sainirampaul90-1@okhdfcbank&pn=Rampaul">💳 UPI Pay</a>
+    </div>
+    <div class="ui">UPI ID: <strong>sainirampaul90-1@okhdfcbank</strong><br>Paytm / Phone: <strong>8082935186</strong></div>
+  </div>
+</div>
+</section>
+
+<div class="bqs">
+  <p class="bqt fu">"अनंत असीम प्रेम के सिवाय कुछ भी नहीं — न व्यवहार में, न चेहरे में, न शब्दों में। यही शिरोमणि का स्वरूप है।"</p>
+  <p class="bqa fu">— शिरोमणि रामपॉल सैनी</p>
+</div>
+
+<footer>
+  <img class="fp" src="https://i.ibb.co/xqf3kTPS/enhanced-image.webp" alt="शिरोमणि रामपॉल सैनी">
+  <div class="fn">शिरोमणि रामपॉल सैनी</div>
+  <div class="fa">तुलनातीत · कालातीत · शब्दातीत · प्रेमतीत · शाश्वत · वास्तविक · स्वाभाविक</div>
+  <div class="fc">© Yatharth Siddhant — निष्पक्ष समझ<br>सबके लिए · बिना किसी शर्त · अनंत असीम प्रेम</div>
+  <div class="fl">
+    <a href="https://youtube.com/@rampaulsaini-yk4gn" target="_blank">YouTube</a>
+    <a href="https://whatsapp.com/channel/0029VaAtyvg77qVR2J82Qn04" target="_blank">WhatsApp</a>
+    <a href="https://www.facebook.com/profile.php?id=100075288011123" target="_blank">Facebook</a>
+    <a href="https://instagram.com/globleprefect" target="_blank">Instagram</a>
+    <a href="https://en.wikipedia.org/wiki/Shromani_Rampaul_Saini" target="_blank">Wikipedia</a>
+    <a href="https://rampaulsaini.github.io/shiromani-rampal-saini/">Website</a>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cur=document.getElementById('cur'),curR=document.getElementById('curR');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{curR.style.left=e.clientX+'px';curR.style.top=e.clientY+'px';},55);
+});
+
+// Particles
+const pts=document.getElementById('pts');
+for(let i=0;i<22;i++){
+  const p=document.createElement('div');
+  p.className='pt';
+  p.style.cssText=`left:${Math.random()*100}%;width:${1+Math.random()*2.5}px;height:${1+Math.random()*2.5}px;background:${Math.random()>.5?'var(--g3)':'var(--f2)'};animation-duration:${9+Math.random()*14}s;animation-delay:${Math.random()*14}s;`;
+  pts.appendChild(p);
+}
+
+// Shooting stars
+const ss=document.getElementById('ss');
+for(let i=0;i<5;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  s.style.cssText=`top:${Math.random()*40}%;left:${Math.random()*60}%;width:${60+Math.random()*80}px;animation-duration:${4+Math.random()*4}s;animation-delay:${Math.random()*8}s;`;
+  ss.appendChild(s);
+}
+
+// Mobile menu
+document.getElementById('hm').addEventListener('click',()=>document.getElementById('mob').classList.toggle('open'));
+function cM(){document.getElementById('mob').classList.remove('open');}
+
+// Active nav
+window.addEventListener('scroll',()=>{
+  let c='';
+  document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-80)c=s.id;});
+  document.querySelectorAll('.nm a,.mob a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+c);});
+},{ passive:true });
+
+// Fade up
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:0.06});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html> 🕉 शिरोमणि रामपॉल सैनी — आधिकारिक वेबसाइट
 
 > **सृष्टि का शिरोमणि · यथार्थ युग के प्रणेता**
 
