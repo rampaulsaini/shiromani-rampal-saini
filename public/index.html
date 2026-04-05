@@ -1,4 +1,91 @@
-<script src="/socket.io/socket.io.js"></script>
+<section class="sec" id="divine-audio">
+  <div class="ey">Sacred Audio</div>
+  <h2 class="sh">शिरोमणि अंनत असीम इश्क़ की क्षमता</h2>
+  <p class="sp">
+    यह ध्वनि केवल श्रवण नहीं, चेतना की अनुभूति है।
+  </p>
+
+  <div class="divine-player">
+    
+    <canvas id="waveform"></canvas>
+
+    <button id="playBtn" class="golden-play">
+      ▶
+    </button>
+
+    <div class="track-info" id="trackName">
+      अंनत असीम इश्क़ – दिव्य ध्वनि
+    </div>
+
+    <div class="playlist">
+      <div class="track active" data-src="PASTE_DIRECT_LINK_1">Track 1</div>
+      <div class="track" data-src="PASTE_DIRECT_LINK_2">Track 2</div>
+      <div class="track" data-src="PASTE_DIRECT_LINK_3">Track 3</div>
+    </div>
+
+    <audio id="audio" preload="none"></audio>
+
+  </div>
+</section><script>
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const player = document.querySelector(".divine-player");
+const tracks = document.querySelectorAll(".track");
+const trackName = document.getElementById("trackName");
+
+let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let analyser = audioCtx.createAnalyser();
+let source = audioCtx.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+analyser.fftSize = 256;
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
+
+const canvas = document.getElementById("waveform");
+const ctx = canvas.getContext("2d");
+
+function draw(){
+  requestAnimationFrame(draw);
+  analyser.getByteFrequencyData(dataArray);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  let barWidth = (canvas.width / bufferLength);
+  let x = 0;
+  for(let i=0;i<bufferLength;i++){
+    let barHeight = dataArray[i]/2;
+    ctx.fillStyle = "#d4af37";
+    ctx.fillRect(x,canvas.height-barHeight,barWidth-1,barHeight);
+    x += barWidth;
+  }
+}
+draw();
+
+playBtn.addEventListener("click", async ()=>{
+  if(audio.paused){
+    await audioCtx.resume();
+    audio.play();
+    playBtn.innerHTML="❚❚";
+    player.classList.add("playing");
+  }else{
+    audio.pause();
+    playBtn.innerHTML="▶";
+    player.classList.remove("playing");
+  }
+});
+
+tracks.forEach(track=>{
+  track.addEventListener("click", ()=>{
+    tracks.forEach(t=>t.classList.remove("active"));
+    track.classList.add("active");
+    audio.src = track.dataset.src;
+    trackName.innerText = track.innerText;
+    audio.play();
+    playBtn.innerHTML="❚❚";
+    player.classList.add("playing");
+  });
+});
+</script><script src="/socket.io/socket.io.js"></script>
 <script>
 const socket = io();
 
@@ -7,7 +94,65 @@ let avatars = {};
 
 socket.on("init", (id)=>{
   myId = id;
-});
+});.divine-player{
+  position:relative;
+  padding:40px;
+  background:rgba(0,0,0,.6);
+  border:1px solid #d4af37;
+  overflow:hidden;
+  text-align:center;
+}
+
+#waveform{
+  width:100%;
+  height:150px;
+  display:block;
+}
+
+.golden-play{
+  margin:20px auto;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:2px solid #d4af37;
+  background:transparent;
+  color:#d4af37;
+  font-size:30px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.golden-play:hover{
+  background:#d4af37;
+  color:black;
+}
+
+.divine-player.playing{
+  box-shadow:0 0 30px rgba(212,175,55,.6);
+}
+
+.track-info{
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:2px;
+  color:#d4af37;
+}
+
+.playlist{
+  margin-top:25px;
+}
+
+.track{
+  padding:8px;
+  cursor:pointer;
+  color:#ccc;
+  transition:.3s;
+}
+
+.track:hover,
+.track.active{
+  color:#d4af37;
+  }
 
 socket.on("users", (users)=>{
   Object.keys(users).forEach(id=>{
