@@ -13,8 +13,7 @@ Yatharth presents an experiential path — a direct, living realization of one�
 
 ## Live site (embed)
 <iframe src="https://rampaulsaini.github.io/my-omniverse-store/" width="100%" height="900" style="border:2px solid #ffd966;border-radius:8px;"></iframe>
-https://github.com/rampaulsaini/shiromani-rampal-saini.git/ 
----
+https://rampaulsaini.github.io/shiromani-rampal-saini/
 
 ## Main links
 - 🔊 MP3 / Audio: https://drive.google.com/drive/folders/18iPsn9Rjc7E0jNwvIx_h5MwQrhqyYt1Y  
