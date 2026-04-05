@@ -143,6 +143,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:flex;al
 .sp{font-size:1rem;color:var(--mu);line-height:2.1;margin-bottom:38px;max-width:660px;}
 
 /* AUDIO */
+  <script src="/socket.io/socket.io.js"></script>
+<script>
+const socket = io();
+
+let myId;
+let avatars = {};
+
+socket.on("init", (id)=>{
+  myId = id;
+});
+
+socket.on("users", (users)=>{
+  Object.keys(users).forEach(id=>{
+    if(!avatars[id]){
+      const geo = new THREE.SphereGeometry(0.5,16,16);
+      const mat = new THREE.MeshBasicMaterial({color:0x00ffff});
+      const avatar = new THREE.Mesh(geo,mat);
+      scene.add(avatar);
+      avatars[id] = avatar;
+    }
+    avatars[id].position.set(users[id].x, users[id].y, users[id].z);
+  });
+});
+</script>
+      
 .apc{background:var(--card);border:1px solid var(--b2);overflow:hidden;margin-bottom:16px;transition:box-shadow .4s;}
 .apc:hover{box-shadow:0 0 30px rgba(212,115,42,.12);}
 .aph{padding:18px 28px;background:linear-gradient(to right,rgba(212,115,42,.09),transparent);border-bottom:1px solid var(--b);display:flex;align-items:center;gap:12px;}
