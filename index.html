@@ -143,76 +143,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:62px;display:flex;al
 .sp{font-size:1rem;color:var(--mu);line-height:2.1;margin-bottom:38px;max-width:660px;}
 
 /* AUDIO */
-  .divine-player{
-  position:relative;
-  padding:40px;
-  background:rgba(0,0,0,.6);
-  border:1px solid #d4af37;
-  overflow:hidden;
-  text-align:center;
-}
-
-#waveform{
-  width:100%;
-  height:150px;
-  display:block;
-}
-
-.golden-play{
-  margin:20px auto;
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  border:2px solid #d4af37;
-  background:transparent;
-  color:#d4af37;
-  font-size:30px;
-  cursor:pointer;
-  transition:.4s;
-}
-
-.golden-play:hover{
-  background:#d4af37;
-  color:black;
-}
-
-.divine-player.playing{
-  box-shadow:0 0 30px rgba(212,175,55,.6);
-}
-
-.track-info{
-  margin-top:10px;
-  font-family:'Cormorant Garamond',serif;
-  letter-spacing:2px;
-  color:#d4af37;
-}
-
-.playlist{
-  margin-top:25px;
-}
-
-.track{
-  padding:8px;
-  cursor:pointer;
-  color:#ccc;
-  transition:.3s;
-}
-
-.track:hover,
-.track.active{
-  color:#d4af37;
-}
-  <script src="/socket.io/socket.io.js"></script>
-<script>
-const socket = io();
-
-let myId;
-let avatars = {};
-
-socket.on("init", (id)=>{
-  myId = id;
-});
-
+ 🔊 MP3 / Audio: MP3 / Audio:https://drive.google.com/drive/folders/1lV-8sFU0vLOQVX3HyXznHbHpcRF9Kojc
 socket.on("users", (users)=>{
   Object.keys(users).forEach(id=>{
     if(!avatars[id]){
@@ -1037,7 +968,7 @@ footer{background:#030201;border-top:1px solid var(--b);padding:56px 22px 34px;t
 <div class="do"><span>✦</span></div>
 
 <!-- AUDIO -->
-  <section class="sec" id="divine-audio">
+  <section class="sec" id="https://drive.google.com/drive/folders/1lV-8sFU0vLOQVX3HyXznHbHpcRF9Kojc">
   <div class="ey">Sacred Audio</div>
   <h2 class="sh">शिरोमणि अंनत असीम इश्क़ की क्षमता</h2>
   <p class="sp">
@@ -1107,7 +1038,7 @@ playBtn.addEventListener("click", async ()=>{
     playBtn.innerHTML="❚❚";
     player.classList.add("playing");
   }else{
-    audio.pause();
+    audio.pause(https://drive.google.com/drive/folders/1lV-8sFU0vLOQVX3HyXznHbHpcRF9Kojc);
     playBtn.innerHTML="▶";
     player.classList.remove("playing");
   }
