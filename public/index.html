@@ -1,1 +1,24 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+const socket = io();
 
+let myId;
+let avatars = {};
+
+socket.on("init", (id)=>{
+  myId = id;
+});
+
+socket.on("users", (users)=>{
+  Object.keys(users).forEach(id=>{
+    if(!avatars[id]){
+      const geo = new THREE.SphereGeometry(0.5,16,16);
+      const mat = new THREE.MeshBasicMaterial({color:0x00ffff});
+      const avatar = new THREE.Mesh(geo,mat);
+      scene.add(avatar);
+      avatars[id] = avatar;
+    }
+    avatars[id].position.set(users[id].x, users[id].y, users[id].z);
+  });
+});
+</script>
