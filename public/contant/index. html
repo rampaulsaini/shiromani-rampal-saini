@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शिरोमणि रामपॉल सैनी</title>
+    <style>
+        body {
+            font-family: "Noto Sans Devanagari", Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #222;
+        }
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 40px;
+            color: #555;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            text-align: justify;
+            font-size: 18px;
+        }
+        .signature {
+            margin-top: 60px;
+            text-align: right;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
 
+    <h1>शिरोमणि रामपॉल सैनी</h1>
+    <h2>Impartial Equation of Reality</h2>
+
+    <div class="content">
+        <p>
+        Complete contentment does not arise from touch, sight, sound, thought, or intellectual construction.
+        It is a continuous, ever-fresh presence beyond sensory confirmation. The temporary intellect
+        seeks stimulation through comparison, ambition, fear, and fleeting pleasure, yet true fulfillment
+        remains independent of these movements.
+        </p>
+
+        <p>
+        The entire physical universe — body, identity, nature, social structure — is impermanent.
+        What appears stable exists only as long as breath continues and the brain functions.
+        The confusion of humanity arises from identification with the mental construct of “I.”
+        </p>
+
+        <p>
+        There is a vast difference between the “I” of the mind and the “I” of the heart.
+        The mind-based identity seeks recognition and control.
+        The heart-based awareness rests in simplicity and impartial presence.
+        </p>
+
+        <p>
+        A newborn embodies natural clarity — without ideology, comparison, or accumulated knowledge.
+        This innocence is not ignorance; it is pre-conceptual awareness.
+        It attracts and softens others through silent coherence rather than argument.
+        </p>
+
+        <p>
+        The mind is a necessary instrument for survival and organization,
+        yet it cannot create the foundational simplicity from which life arises.
+        Breath belongs to organic presence.
+        Time belongs to cognition.
+        </p>
+
+        <p>
+        When lived from mental construction alone, life becomes struggle.
+        When lived from direct awareness of breath and heart,
+        life becomes integrated, steady, and free from inner conflict.
+        </p>
+
+        <p>
+        No authority, doctrine, or hierarchy grants freedom.
+        Clarity emerges through direct observation and inner honesty.
+        What is true withstands inquiry.
+        What is false dissolves naturally.
+        </p>
+
+        <p>
+        Before thought.
+        Before identity.
+        Before psychological time.
+        There is silent, self-evident presence.
+        </p>
+
+        <div class="signature">
+            — शिरोमणि रामपॉल सैनी
+        </div>
+    </div>
+
+</body>
+</html>
