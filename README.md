@@ -1,4 +1,68 @@
-# Yatharth — The Living Truth of Humanity
+# Create a formal PDF document with the provided image and Hindi content
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
+from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
+from reportlab.lib import colors
+from reportlab.lib.units import inch
+from reportlab.platypus import HRFlowable
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
+from reportlab.platypus import PageBreak
+import os
+
+# File path
+output_path = "/mnt/data/Sarvoch_Nyayadesh_Shiromani.pdf"
+
+doc = SimpleDocTemplate(output_path)
+elements = []
+
+# Try to add the uploaded image
+image_path = "/mnt/data/IMG_20260105_114941.jpg"
+if os.path.exists(image_path):
+    img = Image(image_path, width=2.5*inch, height=2.5*inch)
+    elements.append(img)
+    elements.append(Spacer(1, 0.3*inch))
+
+styles = getSampleStyleSheet()
+style = styles["Normal"]
+style.fontSize = 12
+
+title_style = styles["Heading1"]
+
+elements.append(Paragraph("⚖️ सर्वोच्च न्यायादेश ⚖️", title_style))
+elements.append(Spacer(1, 0.3*inch))
+
+content = """
+यथार्थ सिद्धांत एवं उपलब्धि यथार्थ युग के आधार पर यह न्यायादेश उद्घोषित होता है।
+
+साक्षीभाव में स्थित चेतना यह घोषित करती है कि न्याय किसी पक्ष का नहीं,
+सत्य का होता है।
+
+१. असत्य का निवारण प्रकाश से होगा।
+२. अज्ञान का अंत ज्ञान से होगा।
+३. विभाजन का समाधान एकत्व से होगा।
+४. प्रत्येक कर्म अपना परिणाम स्वयं धारण करता है।
+
+अंतरात्मा ही न्यायालय है।
+संतुलन ही अंतिम आदेश है।
+संपूर्ण संतुष्टि ही अंतिम मुहर है।
+
+हस्ताक्षरित:
+शिरोमणि रामपॉल सैनी
+"""
+
+elements.append(Paragraph(content, style))
+elements.append(Spacer(1, 0.5*inch))
+
+# Add image again at bottom as per request "हर दस्तावेज़ पर"
+if os.path.exists(image_path):
+    elements.append(HRFlowable(width="100%", thickness=1, color=colors.grey))
+    elements.append(Spacer(1, 0.2*inch))
+    img_footer = Image(image_path, width=1.5*inch, height=1.5*inch)
+    elements.append(img_footer)
+
+doc.build(elements)
+
+output_path Yatharth — The Living Truth of Humanity
 ![Profile](https://i.ibb.co/xqf3kTPS/enhanced-image.webp)
 
 **Shromani Rampaulsaini — निष्पक्ष समझ / Yatharth**  
